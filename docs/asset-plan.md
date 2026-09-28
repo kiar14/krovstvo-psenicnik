@@ -28,10 +28,10 @@ Photorealistic architectural photography in the pre-alpine countryside of Koroš
 | `hero-before-desktop.webp` | ✅ received | 1672 × 941 | Storm, old mossy roof |
 | `hero-after-desktop.webp` | ✅ received | 1672 × 941 | Sun, new terracotta roof, 2 roof windows, snow guards, new gutter |
 | `hero-before-mobile.webp` | ✅ received | 1122 × 1402 (4:5) | |
-| `hero-after-mobile.webp` | ⏳ **waiting** | 1122 × 1402 (4:5) | Must be an edit of `hero-before-mobile` with an identical frame |
+| `hero-after-mobile.webp` | ✅ received | 1122 × 1402 (4:5) | |
 
 **Notes on what you sent:**
-- The desktop pair looks well aligned (same house, trees and path). Good.
+- **Both pairs are pixel-aligned** (checked with a 50/50 overlay: no ghosting). Good.
 - **Upscale the desktop pair 2× (to ~3344 × 1882)** with the same tool for both (e.g. Magnific, Krea, Topaz, or the upscaler in your generator). At 1672 px wide, a full-screen hero looks soft on 1920 px and larger screens. Upscale both with the same settings so they still line up.
 - For the mobile after image, use the prompt below as an edit of `hero-before-mobile`:
 
@@ -45,7 +45,7 @@ Same image, same camera, same framing, same house walls, balcony, windows, door,
 
 | ID | Page › section | Ratio · size | AI / real | Prompt (+ house style) |
 |---|---|---|---|---|
-| **H1–H4** | Home › Hero | see above | AI | ✅ 3 received, 1 waiting |
+| **H1–H4** | Home › Hero | see above | AI | ✅ all 4 received |
 | **S1** | Services › **Krovstvo in ravne strehe** | 4:3 · 1600 × 1200 | AI | `Close-up of a freshly laid terracotta clay tile roof, looking along the rows toward the ridge, with a clean ridge line and one neatly flashed chimney; soft side light shows the tile profile; hills softly out of focus in the background. 4:3.` |
 | **S2** | Services › **Kleparstvo** | 4:3 · 1600 × 1200 | AI | `Detail of precise tinsmith work at the eave of a house: an anthracite half-round aluminium gutter with a hopper and downpipe, crisp folded sheet-metal flashing along a rendered wall, clean joints, terracotta tiles just visible above. 4:3.` |
 | **S3** | Services › **Tesarstvo in nadstreški** | 4:3 · 1600 × 1200 | AI | `A new roof structure of fresh spruce timber rafters and a ridge beam on a house under construction, seen from below against a clear blue sky, crisp joints and metal connectors, the rafters forming strong parallel lines. 4:3.` |
@@ -71,23 +71,28 @@ Put everything in **`assets/raw/`** (lower case, no spaces):
 - [x] `hero-before-desktop.webp`
 - [x] `hero-after-desktop.webp`
 - [x] `hero-before-mobile.webp`
-- [ ] `hero-after-mobile.webp`: an edit of the mobile before image (prompt above)
+- [x] `hero-after-mobile.webp`
 - [ ] *(recommended)* 2× upscaled desktop pair, same file names
 
 **Generate (AI), 4:3 · 1600 × 1200:**
-- [ ] `service-krovstvo.jpg`
-- [ ] `service-kleparstvo.jpg`
-- [ ] `service-tesarstvo.jpg`
-- [ ] `service-stresna-okna.jpg`
+- [x] `service-krovstvo.webp` (1448 × 1086) ⚠️ see note below
+- [x] `service-kleparstvo.webp` (1448 × 1086)
+- [x] `service-tesarstvo.webp` (1448 × 1086)
+- [x] `service-stresna-okna.webp` (1448 × 1086)
 - [ ] `service-strelovodi.jpg`
 - [ ] `service-visinska-dela.jpg`
 
+**⚠️ Note on `service-krovstvo`:** the background looks like **Tuscany** (cypress and olive trees, a stone hill-town villa, a Mediterranean chimney), not Koroška. Recommended fix (an edit of that image):
+```
+Same image, same camera, same roof tiles and ridge, same light. Change only the background and the chimney: replace the cypress and olive trees and the stone villa with spruce forest, green meadows and rolling pre-alpine hills of Koroška, Slovenia, with a few white rendered houses with red roofs in the distance; replace the stone chimney with a simple white rendered chimney with an anthracite metal cap and clean anthracite flashing.
+```
+
 **Collect:**
-- [ ] 12 reference photos from the old site (download in your browser; the old site is blocked from this environment): `http://www.krovstvo-psenicnik.si/kdo_htm_files/2532.jpg` to `…/2543.jpg`, saved as `ref-01.jpg` … `ref-12.jpg`
+- [x] 12 reference photos from the old site, scraped: `ref-01.jpg` … `ref-12.jpg` (800 × 579 each; originals from the client would be better)
 - [ ] Brand logos (SVG preferred): `logo-tondach.svg`, `logo-creaton.svg`, `logo-bramac.svg`, `logo-decra.svg`, `logo-prefa.svg`, `logo-rheinzink.svg`, `logo-braas.svg`, `logo-erlus.svg`, `logo-tegola.svg`, `logo-eternit.svg`
 
 **From the client (MISSING, the demo uses placeholders):**
 - [ ] `team.jpg`: Tomo and the team (real photo, 4:5)
-- [ ] `logo.svg`: the company logo in vector format
+- [ ] `logo.svg`: **new logo**. Prompts are in `docs/logo-prompts.md`
 
 If files are missing when we get to A3, I build with marked placeholders, so you only have to drop the files in.

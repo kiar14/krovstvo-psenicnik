@@ -62,5 +62,5 @@ A sticky bar, transparent over the hero, turning into a solid cement-grey bar on
 - Hours: Mon–Fri 7:00–16:00, Saturday by appointment.
 - The form's success message promises a reply "within 1 working day".
 - The German version is a machine-assisted draft (to be proofread).
-- Logo: a typeset wordmark "PŠENIČNIK" until they supply vector files.
+- Logo: a **new logo** is being made (prompts in `docs/logo-prompts.md`); until it arrives, a typeset wordmark "PŠENIČNIK".
 - The brand logos in the Kritine strip are used as "brands we install" (common practice); swap in official logo files when collected.
