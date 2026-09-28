@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getImageProps } from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
@@ -12,7 +12,7 @@ gsap.registerPlugin(useGSAP)
 type Labels = { before: string; after: string; compare: string; alt: string }
 
 function artDirected(desktop: string, mobile: string, alt: string, lcp: boolean) {
-  const common = { alt, sizes: "100vw", quality: 80, fetchPriority: lcp ? ("high" as const) : undefined }
+  const common = { alt, sizes: "100vw", quality: 70, fetchPriority: lcp ? ("high" as const) : ("low" as const) }
   const {
     props: { srcSet: mobileSet },
   } = getImageProps({ ...common, src: mobile, width: 1122, height: 1402 })
@@ -31,6 +31,8 @@ export function HeroCompare({ labels }: { labels: Labels }) {
   const beforeBtn = useRef<HTMLButtonElement>(null)
   const afterBtn = useRef<HTMLButtonElement>(null)
   const line = useRef<HTMLDivElement>(null)
+  // The "after" photo is fetched only once the page has loaded, so the first photo (LCP) gets the bandwidth
+  const [showAfter, setShowAfter] = useState(false)
 
   const before = artDirected("/media/hero-before-desktop.webp", "/media/hero-before-mobile.webp", labels.alt, true)
   const after = artDirected("/media/hero-after-desktop.webp", "/media/hero-after-mobile.webp", "", false)
@@ -53,21 +55,38 @@ export function HeroCompare({ labels }: { labels: Labels }) {
         tween.current = gsap.to(state.current, {
           reveal: 1,
           duration: 2.4,
-          delay: 1.1,
+          delay: 0.5,
           ease: "power3.inOut",
           onUpdate: apply,
+          paused: true,
         })
-      })
-      mm.add("(prefers-reduced-motion: reduce)", () => {
-        state.current.reveal = 1
-        apply()
       })
     },
     { scope },
   )
 
+  useEffect(() => {
+    const show = () => setShowAfter(true)
+    if (document.readyState === "complete") {
+      const id = window.setTimeout(show, 0)
+      return () => window.clearTimeout(id)
+    }
+    window.addEventListener("load", show, { once: true })
+    return () => window.removeEventListener("load", show)
+  }, [])
+
+  const onAfterLoad = () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      state.current.reveal = 1
+      apply()
+    } else if (state.current.reveal === 0) {
+      tween.current?.play()
+    }
+  }
+
   // Event handler: refs are read on click, not during render
   const go = (to: 0 | 1) => {
+    setShowAfter(true)
     tween.current?.kill()
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     tween.current = gsap.to(state.current, {
@@ -93,19 +112,23 @@ export function HeroCompare({ labels }: { labels: Labels }) {
         <img {...before.props} className="size-full object-cover object-[72%_center] md:object-[center_60%]" />
       </picture>
 
-      <picture
-        className="absolute inset-0 [clip-path:inset(0_calc((1_-_var(--reveal))_*_100%)_0_0)]"
-      >
-        <source media="(max-width: 767px)" srcSet={after.mobileSet} />
-        {/* eslint-disable-next-line jsx-a11y/alt-text -- decorative duplicate of the image above */}
-        <img {...after.props} className="size-full object-cover object-[72%_center] md:object-[center_60%]" />
-      </picture>
+      {showAfter && (
+        <picture className="absolute inset-0 [clip-path:inset(0_calc((1_-_var(--reveal))_*_100%)_0_0)]">
+          <source media="(max-width: 767px)" srcSet={after.mobileSet} />
+          {/* eslint-disable-next-line jsx-a11y/alt-text -- decorative duplicate of the image above */}
+          <img
+            {...after.props}
+            onLoad={onAfterLoad}
+            className="size-full object-cover object-[72%_center] md:object-[center_60%]"
+          />
+        </picture>
+      )}
 
       {/* The chalk line: visible only while it moves */}
       <div
         ref={line}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-[calc(var(--reveal)*100%)] w-0 opacity-0 transition-opacity duration-300"
+        className="pointer-events-none absolute inset-0 translate-x-[calc(var(--reveal)_*_100%)] opacity-0 transition-opacity duration-300"
       >
         <div className="absolute inset-y-0 -left-px w-[3px] bg-spruce shadow-[0_0_24px_4px_rgb(217_168_100/0.55)]" />
         <div className="absolute top-1/2 -left-6 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-spruce text-navy-ink shadow-lift">
