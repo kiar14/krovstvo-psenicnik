@@ -1,7 +1,12 @@
 export const site = {
   name: "PŠENIČNIK storitve d.o.o.",
   shortName: "Pšeničnik",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.krovstvo-psenicnik.si",
+  // Until the domain is connected (B4), canonical and share URLs use the Vercel address
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://www.krovstvo-psenicnik.si"),
   phone: "041 757 179",
   phoneHref: "tel:+38641757179",
   email: "tomo.psenicnik@gmail.com",
