@@ -9,6 +9,17 @@
 
 > ⚠️ **Two legal entities.** The current site belongs to the sole trader **TO&SA Tomo Pšeničnik, s.p.** (tax no. 74486403). The new client is the company **PŠENIČNIK storitve d.o.o.** Both are at the same address, with the same owner, phone and email. It looks like the business moved from the s.p. to the d.o.o. **Confirm with the client** which entity goes in the site footer and legal info, and whether the s.p. still trades.
 
+> ✅ **Decisions after review (2026-09-28):**
+> - The site is for the **d.o.o.** only. The s.p. is not shown.
+> - Years: use **"Z vami že od 2010"**.
+> - **No reviews section and no star rating** (only 4 Google reviews, one of them 1★).
+> - **No newsletter. No mascot.**
+> - Languages: **Slovenian + German**, switched with a flag next to the word.
+> - Opening hours: we choose typical trade hours for the footer (Mon–Fri 7:00–16:00, Sat by appointment).
+> - Team and Tomo photos: marked placeholders until they arrive.
+> - Their YouTube video may be used (a few projects, nothing special).
+> - Anything else missing: make a sensible assumption and mark it.
+
 ---
 
 ## 1. Facts
