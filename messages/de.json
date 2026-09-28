@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Dachdecker, Spengler und Zimmerei Pšeničnik | Kärnten & Koroška",
+    "description": "Dachdecker- und Spenglermeister aus Libeliče an der Kärntner Grenze. Neue Dächer, Dachsanierung, Dachrinnen, Dachstühle, Dachfenster und Blitzschutz – in Slowenien und Österreich. Seit 2010 für Sie da."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "references": "Referenzen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "close": "Menü schließen",
+    "call": "Rufen Sie uns an",
+    "skip": "Zum Inhalt springen",
+    "home": "Pšeničnik – Startseite",
+    "language": "Sprache",
+    "phone": "+386 41 757 179"
+  },
+  "hero": {
+    "line1": "Schnell.",
+    "line2": "Sauber gearbeitet.",
+    "line3": "Zum vereinbarten Termin.",
+    "lead": "Dachdecker-, Spengler- und Zimmererarbeiten für Häuser in Kärnten und im slowenischen Koroška. Geführt von einem Dachdecker- und Spenglermeister – von der Besichtigung bis zum letzten Detail.",
+    "cta": "Anfrage senden",
+    "before": "Vorher",
+    "after": "Nachher",
+    "compare": "Altes und neues Dach vergleichen",
+    "imageAlt": "Einfamilienhaus in Kärnten: altes, verwittertes Dach und dasselbe Haus mit neuer Tondachdeckung, Dachfenstern und Dachrinnen"
+  },
+  "trust": {
+    "master": {
+      "title": "Spenglermeister",
+      "text": "Dachdecker & Spengler (OZS)"
+    },
+    "deadline": {
+      "title": "Termintreu",
+      "text": "und schnell erreichbar"
+    },
+    "since": {
+      "title": "Seit 2010 für Sie da",
+      "text": "Familienbetrieb aus Libeliče"
+    },
+    "allInOne": {
+      "title": "Alles aus einer Hand",
+      "text": "Dach, Spenglerei, Zimmerei"
+    },
+    "austria": {
+      "title": "Auch in Österreich",
+      "text": "Kärnten und Koroška"
+    }
+  },
+  "services": {
+    "title": "Alles für Ihr Dach aus einer Hand",
+    "intro": "Vom Dachstuhl bis zur letzten Dachrinne. Weil wir alles selbst machen, wartet kein Gewerk auf das andere.",
+    "ask": "Anfragen",
+    "items": {
+      "krovstvo": {
+        "title": "Dachdeckerei & Flachdächer",
+        "text": "Neue Dächer, Neueindeckung, Dachdämmung und Flachdächer."
+      },
+      "kleparstvo": {
+        "title": "Spenglerei",
+        "text": "Dachrinnen, Fallrohre, Verblechungen, Schneefänge und Blecharbeiten nach Maß."
+      },
+      "tesarstvo": {
+        "title": "Zimmerei & Carports",
+        "text": "Dachstühle, Gauben, Dachstuhlsanierung, Carports und Pergolen."
+      },
+      "stresnaOkna": {
+        "title": "Dachfenster & Lichtkuppeln",
+        "text": "Klassische und Panorama-Dachfenster mit Eindeckrahmen für jede Deckung."
+      },
+      "strelovodi": {
+        "title": "Blitzschutz",
+        "text": "Montage von Blitzschutzanlagen, Messungen und Prüfbescheinigung."
+      },
+      "visinskaDela": {
+        "title": "Arbeiten in der Höhe",
+        "text": "Hubsteiger, Fassaden- und Hängegerüste, Dach- und Dachrinnenreinigung."
+      }
+    }
+  },
+  "form": {
+    "line1": "Ihr Dach.",
+    "line2": "Unser Können.",
+    "line3": "Ein fixer Termin.",
+    "lead": "Sie planen ein neues Dach, eine Neueindeckung oder eine Reparatur? Sagen Sie uns, was Sie brauchen – wir vereinbaren eine Besichtigung.",
+    "callLabel": "Oder rufen Sie uns an",
+    "name": "Vor- und Nachname",
+    "phone": "Telefon",
+    "service": "Leistung",
+    "servicePlaceholder": "Leistung wählen",
+    "other": "Sonstiges",
+    "message": "Nachricht",
+    "optional": "(optional)",
+    "messagePlaceholder": "Ort, Dachart, was gemacht werden soll …",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet …",
+    "demoNote": "Demo-Formular. Daten werden weder gesendet noch gespeichert.",
+    "successTitle": "Danke, {name}!",
+    "successText": "Ihre Anfrage ist angekommen. Wir melden uns innerhalb eines Werktags, um einen Besichtigungstermin zu vereinbaren.",
+    "again": "Neue Anfrage senden",
+    "errorGeneric": "Das Senden hat nicht geklappt. Bitte erneut versuchen oder anrufen: +386 41 757 179.",
+    "errors": {
+      "name": "Bitte geben Sie Ihren Namen ein.",
+      "phone": "Bitte geben Sie eine Telefonnummer an, unter der wir Sie erreichen.",
+      "service": "Bitte wählen Sie eine Leistung.",
+      "message": "Die Nachricht ist zu lang (max. 1000 Zeichen)."
+    }
+  },
+  "process": {
+    "eyebrow": "Ablauf",
+    "title": "Von der Besichtigung zum neuen Dach",
+    "steps": {
+      "1": {
+        "title": "Anrufen oder schreiben",
+        "text": "Sagen Sie uns, was gemacht werden soll – telefonisch oder über das Formular."
+      },
+      "2": {
+        "title": "Besichtigung & Aufmaß",
+        "text": "Wir kommen vorbei, messen das Dach aus und beraten Sie bei der Deckung."
+      },
+      "3": {
+        "title": "Angebot & Termin",
+        "text": "Sie erhalten ein Angebot und einen Ausführungstermin, den wir gemeinsam fixieren."
+      },
+      "4": {
+        "title": "Ausführung termingerecht",
+        "text": "Wir arbeiten zum vereinbarten Termin und übergeben das Dach gemeinsam mit Ihnen."
+      }
+    }
+  },
+  "references": {
+    "title": "Dächer, die wir gemacht haben",
+    "intro": "Eine Auswahl an Projekten aus der Region – vom Einfamilienhaus bis zum Carport.",
+    "video": "Unser Firmenvideo",
+    "videoPlay": "Video abspielen",
+    "items": {
+      "ref-06": "Gauben und Dachfenster",
+      "ref-09": "Flachdach, Neubau",
+      "ref-12": "Carport aus Holz",
+      "ref-04": "Glasierte Dachdeckung",
+      "ref-08": "Dachfenster in anthrazitfarbener Deckung",
+      "ref-02": "Anthrazitfarbene Deckung, größeres Haus",
+      "ref-01": "Unser Firmenwagen, bereit für die Baustelle",
+      "ref-10": "Zimmerer- und Dachdeckerarbeiten"
+    }
+  },
+  "brands": {
+    "title": "Dachdeckungen und Materialien, mit denen wir arbeiten",
+    "intro": "Wir beraten herstellerunabhängig – und wählen, was zu Ihrem Haus und Budget passt."
+  },
+  "about": {
+    "title": "Ein Meister auf Ihrem Dach",
+    "p1": "Der Betrieb wird von Tomo Pšeničnik geführt, Spengler- und Dachdeckermeister mit abgelegter Meisterprüfung. Seit 2010 decken, sanieren und pflegen wir mit unserem Team Dächer in Libeliče, Dravograd und Umgebung sowie im benachbarten Kärnten.",
+    "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an – und arbeiten so, als wäre es unser eigenes.",
+    "photoPlaceholder": "Foto: Tomo und das Team",
+    "photoNote": "folgt in Kürze",
+    "badge": "Meisterprüfung",
+    "badgeSub": "Spengler & Dachdecker",
+    "idTitle": "Firmendaten",
+    "idCompany": "Firma",
+    "idAddress": "Adresse",
+    "idLead": "Leitung",
+    "idLeadValue": "Tomo Pšeničnik, Spengler- und Dachdeckermeister",
+    "idVat": "UID-Nummer",
+    "idReg": "Firmennummer"
+  },
+  "area": {
+    "title": "Wo wir arbeiten",
+    "intro": "Zu Hause sind wir in Libeliče, direkt an der Grenze zu Kärnten. Wir arbeiten in der ganzen Umgebung:",
+    "austria": "Österreich",
+    "slovenia": "Slowenien",
+    "base": "Unser Sitz",
+    "alsoAustria": "…und im benachbarten Kärnten."
+  },
+  "cta": {
+    "title": "Ein Dach, das hält. Ein Termin, der hält.",
+    "text": "Rufen Sie für eine Besichtigung an oder senden Sie uns eine Anfrage.",
+    "button": "Anfrage senden"
+  },
+  "footer": {
+    "tagline": "Dachdeckerei, Spenglerei und Zimmerei aus Libeliče. Seit 2010 für Sie da.",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "hours": "Öffnungszeiten",
+    "weekdays": "Mo–Fr",
+    "saturday": "Samstag",
+    "byAppointment": "nach Vereinbarung",
+    "sunday": "Sonntag",
+    "closed": "geschlossen",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

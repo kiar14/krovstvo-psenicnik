@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@theme {
+  /* Brand */
+  --color-navy: #002d8a;
+  --color-navy-deep: #001f5f;
+  --color-navy-ink: #00163f;
+  --color-terracotta: #ba3201;
+  --color-terracotta-deep: #9a2900;
+  --color-spruce: #d9a864;
+  --color-spruce-soft: #ecd3ad;
+  --color-graphite: #1c2126;
+  --color-slate: #4a535c;
+  --color-cement: #eef0f1;
+  --color-cement-deep: #e2e6e8;
+  --color-paper: #f8f8f6;
+  --color-hairline: #d3d8dc;
+  --color-on-navy: #c9d3ea;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card: 0 1px 2px rgb(0 22 63 / 0.06), 0 12px 32px -12px rgb(0 22 63 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(0 22 63 / 0.08), 0 24px 48px -16px rgb(0 22 63 / 0.28);
+}
+
+:root {
+  --background: var(--color-cement);
+  --foreground: var(--color-graphite);
+  --card: var(--color-paper);
+  --card-foreground: var(--color-graphite);
+  --primary: var(--color-navy);
+  --primary-foreground: #ffffff;
+  --muted: var(--color-cement-deep);
+  --muted-foreground: var(--color-slate);
+  --destructive: #b42318;
+  --border: var(--color-hairline);
+  --input: #c3c9cf;
+  --ring: var(--color-navy);
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--color-navy) var(--color-cement-deep);
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  ::selection {
+    background: var(--color-spruce);
+    color: var(--color-navy-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+  input,
+  textarea,
+  select {
+    caret-color: var(--color-terracotta);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cement-deep);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-navy);
+    border-radius: 999px;
+    border: 2px solid var(--color-cement-deep);
+  }
+}
+
+/* Display type: Big Shoulders at its largest optical size */
+@utility font-display-tight {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+/* Clips a headline line for the slide-up reveal while leaving room for č š ž above capitals */
+@utility mask-line {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.16em 0.06em;
+  margin-block: -0.16em -0.06em;
+}
+
+/* The chalk line: a carpenter's snapped line under headings */
+@utility chalk-line {
+  display: block;
+  height: 3px;
+  width: 4.5rem;
+  border-radius: 2px;
+  background: var(--color-spruce);
+  transform-origin: left center;
+}
+
+@utility pitch-rule {
+  /* A thin 40° roof-pitch stroke used as a separator */
+  width: 1px;
+  height: 1.75rem;
+  background: currentColor;
+  transform: rotate(40deg);
+  opacity: 0.35;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

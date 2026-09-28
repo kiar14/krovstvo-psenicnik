@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Krovstvo, kleparstvo in tesarstvo Pšeničnik | Koroška",
+    "description": "Mojster klepar-krovec iz Libelič. Nove strehe, menjava kritine, žlebovi, ostrešja, strešna okna in strelovodi – Dravograd, Ravne na Koroškem, Prevalje, Vuzenica in Avstrija. Z vami od leta 2010."
+  },
+  "nav": {
+    "services": "Storitve",
+    "references": "Reference",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "menu": "Meni",
+    "close": "Zapri meni",
+    "call": "Pokličite nas",
+    "skip": "Preskoči na vsebino",
+    "home": "Pšeničnik – domov",
+    "language": "Jezik",
+    "phone": "041 757 179"
+  },
+  "hero": {
+    "line1": "Hitro.",
+    "line2": "Kvalitetno.",
+    "line3": "V dogovorjenih rokih.",
+    "lead": "Krovska, kleparska in tesarska dela za domove na Koroškem in v sosednji Avstriji. Vodi jih mojster klepar-krovec – od ogleda do zadnjega strešnega detajla.",
+    "cta": "Pošljite povpraševanje",
+    "before": "Pred",
+    "after": "Po",
+    "compare": "Primerjaj staro in novo streho",
+    "imageAlt": "Družinska hiša na Koroškem: stara, dotrajana streha in ista hiša z novo opečno kritino, strešnimi okni in žlebovi"
+  },
+  "trust": {
+    "master": {
+      "title": "Mojster klepar-krovec",
+      "text": "opravljen mojstrski izpit (OZS)"
+    },
+    "deadline": {
+      "title": "V dogovorjenih rokih",
+      "text": "in hitra odzivnost"
+    },
+    "since": {
+      "title": "Z vami od 2010",
+      "text": "družinsko podjetje iz Libelič"
+    },
+    "allInOne": {
+      "title": "Vse na enem mestu",
+      "text": "krovstvo, kleparstvo, tesarstvo"
+    },
+    "austria": {
+      "title": "Delamo tudi v Avstriji",
+      "text": "Koroška in Kärnten"
+    }
+  },
+  "services": {
+    "title": "Vse za vašo streho, en izvajalec",
+    "intro": "Od ostrešja do zadnjega žleba. Ker vsa dela opravimo sami, se nič ne zatakne med obrtniki.",
+    "ask": "Povpraševanje",
+    "items": {
+      "krovstvo": {
+        "title": "Krovstvo in ravne strehe",
+        "text": "Nove strehe, menjava stare kritine, toplotna izolacija in ravne strehe."
+      },
+      "kleparstvo": {
+        "title": "Kleparstvo",
+        "text": "Žlebovi, odtoki, obrobe, snegobrani in izdelki iz pločevine po meri."
+      },
+      "tesarstvo": {
+        "title": "Tesarstvo in nadstreški",
+        "text": "Ostrešja, frčade, sanacije ostrešij, nadstreški za avto in pergole."
+      },
+      "stresnaOkna": {
+        "title": "Strešna okna in svetlobniki",
+        "text": "Klasična in panoramska strešna okna z obrobami za vse kritine."
+      },
+      "strelovodi": {
+        "title": "Strelovodi",
+        "text": "Montaža strelovodov, meritve in certifikat o ustreznosti inštalacije."
+      },
+      "visinskaDela": {
+        "title": "Višinska dela",
+        "text": "Avtodvigala, gradbeni in viseči odri, čiščenje streh in napuščev."
+      }
+    }
+  },
+  "form": {
+    "line1": "Vaša streha.",
+    "line2": "Naše znanje.",
+    "line3": "Dogovorjen rok.",
+    "lead": "Načrtujete novo streho, menjavo kritine ali popravilo? Povejte nam, kaj potrebujete, in dogovorimo se za ogled.",
+    "callLabel": "Ali nas pokličite",
+    "name": "Ime in priimek",
+    "phone": "Telefon",
+    "service": "Vrsta storitve",
+    "servicePlaceholder": "Izberite storitev",
+    "other": "Drugo",
+    "message": "Sporočilo",
+    "optional": "(neobvezno)",
+    "messagePlaceholder": "Kraj, vrsta strehe, kaj bi radi uredili …",
+    "submit": "Pošlji povpraševanje",
+    "sending": "Pošiljanje …",
+    "demoNote": "Predstavitveni obrazec. Podatki se ne pošiljajo ali shranjujejo.",
+    "successTitle": "Hvala, {name}!",
+    "successText": "Povpraševanje smo prejeli. Oglasimo se v enem delovnem dnevu, da se dogovorimo za ogled.",
+    "again": "Pošlji novo povpraševanje",
+    "errorGeneric": "Pošiljanje ni uspelo. Poskusite znova ali nas pokličite na 041 757 179.",
+    "errors": {
+      "name": "Vpišite ime in priimek.",
+      "phone": "Vpišite telefonsko številko, na kateri vas dobimo.",
+      "service": "Izberite storitev.",
+      "message": "Sporočilo je predolgo (največ 1000 znakov)."
+    }
+  },
+  "process": {
+    "eyebrow": "Postopek",
+    "title": "Od ogleda do nove strehe",
+    "steps": {
+      "1": {
+        "title": "Pokličete ali pišete",
+        "text": "Povejte nam, kaj bi radi uredili – po telefonu ali prek obrazca."
+      },
+      "2": {
+        "title": "Ogled in izmere",
+        "text": "Pridemo na ogled, streho izmerimo in svetujemo pri izbiri kritine."
+      },
+      "3": {
+        "title": "Ponudba in rok",
+        "text": "Dobite ponudbo in datum izvedbe, ki ga skupaj potrdimo."
+      },
+      "4": {
+        "title": "Izvedba v roku",
+        "text": "Delo opravimo v dogovorjenem roku in ga skupaj z vami prevzamemo."
+      }
+    }
+  },
+  "references": {
+    "title": "Strehe, ki smo jih naredili",
+    "intro": "Izbor projektov iz naše okolice – od enodružinskih hiš do nadstreškov.",
+    "video": "Naša video predstavitev",
+    "videoPlay": "Predvajaj video",
+    "items": {
+      "ref-06": "Frčade in strešna okna",
+      "ref-09": "Ravna streha, novogradnja",
+      "ref-12": "Lesen nadstrešek za avto",
+      "ref-04": "Glazirana kritina",
+      "ref-08": "Strešna okna v antracitni kritini",
+      "ref-02": "Antracitna kritina, večja hiša",
+      "ref-01": "Naše vozilo, pripravljeno na teren",
+      "ref-10": "Tesarska in krovska dela"
+    }
+  },
+  "brands": {
+    "title": "Kritine in materiali, s katerimi delamo",
+    "intro": "Svetujemo neodvisno od proizvajalca – izberemo, kar ustreza vaši hiši in proračunu."
+  },
+  "about": {
+    "title": "Mojster na vaši strehi",
+    "p1": "Podjetje vodi Tomo Pšeničnik, mojster klepar-krovec z opravljenim mojstrskim izpitom. Od leta 2010 z ekipo prekrivamo, obnavljamo in urejamo strehe v Libeličah, Dravogradu in okolici ter v sosednji Avstriji.",
+    "p2": "Vsaka streha je drugačna. Zato rešitev vedno prilagodimo hiši, njeni namembnosti in vašemu proračunu – in delo opravimo tako, kot bi ga zase.",
+    "photoPlaceholder": "Fotografija: Tomo in ekipa",
+    "photoNote": "prihaja kmalu",
+    "badge": "Mojstrski izpit",
+    "badgeSub": "klepar-krovec",
+    "idTitle": "Osebna izkaznica",
+    "idCompany": "Podjetje",
+    "idAddress": "Naslov",
+    "idLead": "Vodja",
+    "idLeadValue": "Tomo Pšeničnik, mojster klepar-krovec",
+    "idVat": "ID za DDV",
+    "idReg": "Matična številka"
+  },
+  "area": {
+    "title": "Kje delamo",
+    "intro": "Doma smo v Libeličah, tik ob avstrijski meji. Strehe urejamo po vsej okolici:",
+    "austria": "Avstrija",
+    "slovenia": "Slovenija",
+    "base": "Naš sedež",
+    "alsoAustria": "…in v sosednji avstrijski Koroški."
+  },
+  "cta": {
+    "title": "Streha, ki zdrži. Rok, ki drži.",
+    "text": "Pokličite za ogled ali nam pošljite povpraševanje.",
+    "button": "Pošljite povpraševanje"
+  },
+  "footer": {
+    "tagline": "Krovstvo, kleparstvo in tesarstvo iz Libelič. Z vami od leta 2010.",
+    "services": "Storitve",
+    "contact": "Kontakt",
+    "hours": "Delovni čas",
+    "weekdays": "Pon–pet",
+    "saturday": "Sobota",
+    "byAppointment": "po dogovoru",
+    "sunday": "Nedelja",
+    "closed": "zaprto",
+    "rights": "Vse pravice pridržane."
+  }
+}
