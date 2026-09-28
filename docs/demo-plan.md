@@ -64,3 +64,16 @@ A sticky bar, transparent over the hero, turning into a solid cement-grey bar on
 - The German version is a machine-assisted draft (to be proofread).
 - Logo: a **new logo** is being made (prompts in `docs/logo-prompts.md`); until it arrives, a typeset wordmark "PŠENIČNIK".
 - The brand logos in the Kritine strip are used as "brands we install" (common practice); swap in official logo files when collected.
+
+---
+
+## Build notes (A3, 2026-09-28)
+
+- **Live demo:** https://krovstvo-psenicnik.vercel.app (Slovenian) · https://krovstvo-psenicnik.vercel.app/de (German)
+- **Body font changed** from Atkinson Hyperlegible Next to **Source Sans 3**. Atkinson draws the zero with a slash, so "041" and "2010" looked like "Ø4…" / "2Ø1Ø". Headlines stay Big Shoulders.
+- **Hero:** the before photo loads first (it's the LCP image). The after photo loads once the page has finished loading, then the chalk line sweeps once. The Pred/Po switch replays the sweep either way. With reduced motion, the after photo shows at once.
+- **Phones:** the hero keeps the roof clear (headline at the top, buttons over the grass). The lead text is hidden there, and the trust strip follows the picture. The service-area map shows from tablet width up; phones get the town list.
+- **German page:** the phone number is shown as +386 41 757 179.
+- **Logo:** the Recraft SVG was cleaned into transparent variants in `public/brand/` (full, compact, white, symbol). The favicon is the roof symbol.
+- **Speed (local, Fast 4G + 4× CPU, 390 px):** LCP ≈ 0.6 s, CLS 0.
+- **Still placeholders / assumptions:** team photo, opening hours (Mon–Fri 7–16), reply time "1 working day", German copy (needs proofreading), brand names as text (no logos yet).
