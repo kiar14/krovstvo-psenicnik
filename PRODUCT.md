@@ -32,7 +32,7 @@ Visitors mostly arrive on phones, from Google search ("krovec Dravograd", "menja
 
 ## Capabilities and Constraints
 
-- Languages: Slovenian (default) and German, switched with flag + word.
+- Languages: Slovenian (default) and German, switched with flag + word (🇸🇮 SL, 🇩🇪 DE).
 - Company: PŠENIČNIK storitve d.o.o., Libeliče 11, 2372 Libeliče; tax no. SI35531428; reg. no. 5205137000. The old s.p. is not shown.
 - Years: "Z vami že od 2010" (confirmed by the agency; do not use 2003 / 25 years).
 - Opening hours: **assumed** Mon–Fri 7:00–16:00, Sat by appointment (typical for local trades; confirm later).
