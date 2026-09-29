@@ -13,7 +13,7 @@ import { submitInquiry } from "@/lib/actions/inquiry"
 import { SELECT_SERVICE_EVENT } from "./service-link"
 
 const field =
-  "block w-full rounded-lg border border-input bg-white px-4 text-[1.02rem] text-graphite transition-[border-color,box-shadow] duration-200 outline-none placeholder:text-slate/70 hover:border-slate/60 focus:border-navy focus:shadow-[0_0_0_3px_rgb(0_45_138/0.15)] aria-invalid:border-destructive aria-invalid:shadow-[0_0_0_3px_rgb(180_35_24/0.12)]"
+  "block w-full rounded-lg border border-input bg-white px-4 text-[1.02rem] text-graphite transition-[border-color,box-shadow] duration-200 outline-none placeholder:text-slate/70 hover:border-slate/60 focus:border-navy focus:shadow-[0_0_0_3px_rgb(0_22_63/0.15)] aria-invalid:border-destructive aria-invalid:shadow-[0_0_0_3px_rgb(180_35_24/0.12)]"
 
 export function InquiryForm() {
   const t = useTranslations("form")

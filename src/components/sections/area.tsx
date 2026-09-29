@@ -12,7 +12,7 @@ export async function Area() {
 
   return (
     <section aria-labelledby="obmocje-title" className="bg-cement py-24 md:py-32">
-      <Reveal className="mx-auto grid max-w-[1320px] items-center gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16">
+      <Reveal className="mx-auto grid max-w-[1400px] items-center gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-14">
         <div>
           <SectionHeading id="obmocje-title" title={t("title")} intro={t("intro")} align="left" />
           <ul data-reveal="rise" className="mt-7 grid gap-x-6 gap-y-2 sm:grid-cols-2">
@@ -38,8 +38,8 @@ export async function Area() {
           </a>
         </div>
 
-        <figure data-reveal="rise" className="overflow-hidden rounded-2xl bg-navy p-3 shadow-card md:p-5">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-cement-deep sm:aspect-[16/10]">
+        <figure data-reveal="rise" className="relative">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-cement-deep shadow-card sm:aspect-[4/3] lg:aspect-[5/4]">
             <iframe
               title={t("mapTitle")}
               src={`https://maps.google.com/maps?q=${query}&t=m&z=11&hl=${locale}&output=embed`}

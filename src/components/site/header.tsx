@@ -3,12 +3,39 @@
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 import { useLenis } from "lenis/react"
-import { ArrowUpRight, ChevronDown, Menu, Phone, X } from "lucide-react"
+import {
+  AppWindow,
+  ArrowUpRight,
+  ChevronDown,
+  Construction,
+  Droplets,
+  Hammer,
+  House,
+  Menu,
+  Phone,
+  X,
+  Zap,
+  type LucideIcon,
+} from "lucide-react"
 import { useTranslations } from "next-intl"
 import { cn } from "cn"
 import { services, site } from "@/lib/site"
 import { LogoFull } from "./logo"
 import { LanguageSwitch } from "./language-switch"
+
+const serviceIcons: Record<string, LucideIcon> = {
+  krovstvo: House,
+  kleparstvo: Droplets,
+  tesarstvo: Hammer,
+  stresnaOkna: AppWindow,
+  strelovodi: Zap,
+  visinskaDela: Construction,
+}
+
+function ServiceIcon({ name, className }: { name: string; className?: string }) {
+  const Icon = serviceIcons[name] ?? House
+  return <Icon className={className} strokeWidth={1.75} aria-hidden="true" />
+}
 
 const links = [
   { href: "#reference", key: "references" },
@@ -61,7 +88,10 @@ function ServicesMenu() {
         aria-label={t("servicesMenu")}
         className="inline-flex size-8 items-center justify-center rounded-md text-graphite transition-colors hover:bg-graphite/5"
       >
-        <ChevronDown className={cn("size-4 transition-transform duration-300", open && "rotate-180")} aria-hidden="true" />
+        <ChevronDown
+          className={cn("size-4 transition-transform duration-300", open && "rotate-180")}
+          aria-hidden="true"
+        />
       </button>
 
       <AnimatePresence>
@@ -74,15 +104,18 @@ function ServicesMenu() {
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-full left-0 z-50 pt-2"
           >
-            <ul className="w-72 rounded-lg bg-white p-1.5 shadow-lift ring-1 ring-black/5">
+            <ul className="w-80 rounded-lg bg-white p-1.5 shadow-lift ring-1 ring-black/5">
               {services.map(({ key }) => (
                 <li key={key}>
                   <a
                     href={`#storitev-${key}`}
                     onClick={() => setOpen(false)}
-                    className="group flex items-center justify-between gap-3 rounded-md px-3 py-2.5 font-semibold text-graphite transition-colors hover:bg-cement"
+                    className="group flex items-center gap-3 rounded-md px-2 py-2 font-semibold text-graphite transition-colors hover:bg-cement"
                   >
-                    {ts(`${key}.title`)}
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-navy text-spruce">
+                      <ServiceIcon name={key} className="size-[1.1rem]" />
+                    </span>
+                    <span className="flex-1">{ts(`${key}.title`)}</span>
                     <ArrowUpRight
                       className="size-4 text-bronze-ink opacity-0 transition-opacity group-hover:opacity-100"
                       aria-hidden="true"
@@ -208,7 +241,11 @@ export function Header() {
                   className="font-display-tight py-1.5 text-5xl font-extrabold uppercase"
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + i * 0.05, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    delay: 0.15 + i * 0.05,
+                    duration: 0.6,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                 >
                   {t(l.key)}
                 </motion.a>
@@ -216,7 +253,12 @@ export function Header() {
               <ul className="mt-5 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-1 text-on-navy">
                 {services.map(({ key }) => (
                   <li key={key}>
-                    <a href={`#storitev-${key}`} onClick={() => setOpen(false)} className="hover:text-white">
+                    <a
+                      href={`#storitev-${key}`}
+                      onClick={() => setOpen(false)}
+                      className="inline-flex items-center gap-1.5 hover:text-white"
+                    >
+                      <ServiceIcon name={key} className="size-4 text-spruce" />
                       {ts(`${key}.title`)}
                     </a>
                   </li>

@@ -230,6 +230,8 @@
         "q": "Arbeiten Sie auch in Österreich?",
         "a": "Ja. Neben Libeliče, Dravograd, Ravne na Koroškem, Prevalje, Vuzenica und Umgebung arbeiten wir auch im benachbarten Kärnten."
       }
-    ]
+    ],
+    "stillTitle": "Ihre Frage ist nicht dabei?",
+    "stillText": "Rufen Sie uns an, wir helfen gern weiter."
   }
 }

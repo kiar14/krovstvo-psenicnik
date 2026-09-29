@@ -26,8 +26,9 @@
 
 @theme {
   /* Brand */
-  --color-navy: #002d8a;
-  --color-navy-deep: #001f5f;
+  /* One blue only: the dark footer navy */
+  --color-navy: #00163f;
+  --color-navy-deep: #000f2e;
   --color-navy-ink: #00163f;
   /* Golden bronze: the only accent. Never red. */
   --color-spruce: #d9a864;
@@ -154,8 +155,26 @@
   }
 }
 
+/* FAQ: answers slide open where the browser supports ::details-content */
+:root {
+  interpolate-size: allow-keywords;
+}
+details.faq-item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 0.4s var(--ease-out-expo),
+    content-visibility 0.4s allow-discrete;
+}
+details.faq-item[open]::details-content {
+  block-size: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  details.faq-item::details-content {
+    transition: none;
   }
 }
