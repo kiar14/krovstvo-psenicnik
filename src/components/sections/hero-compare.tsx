@@ -34,8 +34,8 @@ export function HeroCompare({ labels }: { labels: Labels }) {
   // The "after" photo is fetched only once the page has loaded, so the first photo (LCP) gets the bandwidth
   const [showAfter, setShowAfter] = useState(false)
 
-  const before = artDirected("/media/hero-before-desktop.webp", "/media/hero-before-mobile.webp", labels.alt, true)
-  const after = artDirected("/media/hero-after-desktop.webp", "/media/hero-after-mobile.webp", "", false)
+  const before = artDirected("/media/hero2-before-desktop.webp", "/media/hero2-before-mobile.webp", labels.alt, true)
+  const after = artDirected("/media/hero2-after-desktop.webp", "/media/hero2-after-mobile.webp", "", false)
 
   const apply = () => {
     const el = scope.current
