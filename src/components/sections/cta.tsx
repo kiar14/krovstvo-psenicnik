@@ -8,8 +8,8 @@ export async function Cta() {
   const t = await getTranslations("cta")
   const tn = await getTranslations("nav")
   return (
-    <section aria-labelledby="cta-title" className="bg-paper px-5 py-20 md:px-8 md:py-24">
-      <Reveal className="relative mx-auto grid max-w-[1320px] items-center gap-8 overflow-hidden rounded-2xl bg-navy px-6 py-10 text-white ring-1 ring-white/10 sm:px-10 md:py-12 lg:grid-cols-[auto_1fr_auto] lg:gap-10 lg:px-14">
+    <section aria-labelledby="cta-title" className="bg-paper px-4 py-16 md:px-6 md:py-20">
+      <Reveal className="relative mx-auto grid max-w-[1760px] items-center gap-8 overflow-hidden rounded-2xl bg-navy px-6 py-12 text-white ring-1 ring-white/10 sm:px-10 md:py-16 lg:grid-cols-[auto_1fr_auto] lg:gap-12 lg:px-16 xl:px-24">
         <svg
           aria-hidden="true"
           viewBox="0 0 600 300"

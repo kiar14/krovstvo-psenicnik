@@ -20,10 +20,13 @@ const options = [
 export function LanguageSwitch({
   tone = "dark",
   placement = "down",
+  align = "end",
   className,
 }: {
   tone?: "light" | "dark"
   placement?: "down" | "up"
+  /** Which edge of the button the menu lines up with. "responsive" = start on mobile, end from md up. */
+  align?: "start" | "end" | "responsive"
   className?: string
 }) {
   const locale = useLocale()
@@ -74,8 +77,11 @@ export function LanguageSwitch({
             exit={{ opacity: 0, y: placement === "down" ? -6 : 6 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className={cn(
-              "absolute right-0 z-50 min-w-44 overflow-hidden rounded-lg bg-white p-1.5 text-graphite shadow-lift ring-1 ring-black/5",
+              "absolute z-50 min-w-44 overflow-hidden rounded-lg bg-white p-1.5 text-graphite shadow-lift ring-1 ring-black/5",
               placement === "down" ? "top-full mt-2" : "bottom-full mb-2",
+              align === "start" && "left-0",
+              align === "end" && "right-0",
+              align === "responsive" && "left-0 md:right-0 md:left-auto",
             )}
           >
             {options.map(({ locale: l, code, Flag }) => {

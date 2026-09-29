@@ -150,30 +150,26 @@
       "ref-12": "Carport aus Holz",
       "ref-04": "Glasierte Dachdeckung",
       "ref-08": "Dachfenster in anthrazitfarbener Deckung",
-      "ref-02": "Anthrazitfarbene Deckung, größeres Haus",
-      "ref-01": "Unser Firmenwagen, bereit für die Baustelle",
-      "ref-10": "Zimmerer- und Dachdeckerarbeiten"
+      "ref-13": "Rohrgerüst und Kirchturmsanierung, Österreich",
+      "ref-14": "Neue Dacheindeckung eines Bürgerhauses"
     }
   },
   "brands": {
-    "title": "Dachdeckungen und Materialien, mit denen wir arbeiten",
-    "intro": "Wir beraten herstellerunabhängig und wählen, was zu Ihrem Haus und Budget passt."
+    "title": "Wir arbeiten mit den besten Materialien"
   },
   "about": {
-    "title": "Ein Meister auf Ihrem Dach",
+    "title": "Ihr Dach in den Händen eines",
+    "titleAccent": "Meisters.",
     "p1": "Der Betrieb wird von Tomo Pšeničnik geführt, Spengler- und Dachdeckermeister mit abgelegter Meisterprüfung. Seit 2010 decken, sanieren und pflegen wir mit unserem Team Dächer in Libeliče, Dravograd und Umgebung sowie im benachbarten Kärnten.",
     "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an. Wir arbeiten so, als wäre es unser eigenes.",
-    "photoPlaceholder": "Foto: Tomo und das Team",
-    "photoNote": "folgt in Kürze",
-    "badge": "Meisterprüfung",
-    "badgeSub": "Spengler & Dachdecker",
-    "idTitle": "Firmendaten",
-    "idCompany": "Firma",
-    "idAddress": "Adresse",
-    "idLead": "Leitung",
-    "idLeadValue": "Tomo Pšeničnik, Spengler- und Dachdeckermeister",
-    "idVat": "UID-Nummer",
-    "idReg": "Firmennummer"
+    "points": [
+      "Meisterprüfung als Spengler und Dachdecker.",
+      "Dachdecker-, Spengler- und Zimmererarbeiten aus einer Hand.",
+      "Wir arbeiten in Slowenien und im benachbarten Österreich."
+    ],
+    "link": "Sprechen wir über Ihr Dach",
+    "imageAlt": "Kaminsanierung auf einem Dach in Bleiburg, Österreich",
+    "stamp": "Seit 2010 an Ihrer Seite."
   },
   "area": {
     "title": "Wo wir arbeiten",
@@ -186,7 +182,7 @@
     "openMap": "In Google Maps öffnen"
   },
   "cta": {
-    "title": "Ein Dach, das hält. Ein Termin, der hält.",
+    "title": "Bereit für ein neues Dach?",
     "text": "Rufen Sie für eine Besichtigung an oder senden Sie uns eine Anfrage.",
     "button": "Anfrage senden"
   },
@@ -230,8 +226,6 @@
         "q": "Arbeiten Sie auch in Österreich?",
         "a": "Ja. Neben Libeliče, Dravograd, Ravne na Koroškem, Prevalje, Vuzenica und Umgebung arbeiten wir auch im benachbarten Kärnten."
       }
-    ],
-    "stillTitle": "Ihre Frage ist nicht dabei?",
-    "stillText": "Rufen Sie uns an, wir helfen gern weiter."
+    ]
   }
 }

@@ -75,7 +75,7 @@ export async function Footer() {
           <p>
             © 2026 {site.name} · {site.street}, {site.postal} {site.city} · ID za DDV {site.vat} · MŠ {site.reg}. {t("rights")}
           </p>
-          <LanguageSwitch tone="light" placement="up" />
+          <LanguageSwitch tone="light" placement="up" align="responsive" />
         </div>
       </div>
     </footer>

@@ -266,7 +266,7 @@ export function Header() {
               </ul>
             </nav>
             <div className="flex items-center justify-between border-t border-white/15 px-6 py-4">
-              <LanguageSwitch tone="light" placement="up" />
+              <LanguageSwitch tone="light" placement="up" align="start" />
               <a href={site.phoneHref} className="inline-flex items-center gap-2 font-bold">
                 <Phone className="size-4 text-spruce" aria-hidden="true" />
                 {t("phone")}

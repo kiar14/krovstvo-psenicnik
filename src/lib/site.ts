@@ -36,8 +36,8 @@ export const references = [
   { id: "ref-12", span: "one" },
   { id: "ref-04", span: "one" },
   { id: "ref-08", span: "one" },
-  { id: "ref-01", span: "one" },
-  { id: "ref-10", span: "one" },
+  { id: "ref-13", span: "one" },
+  { id: "ref-14", span: "one" },
 ] as const
 
 /** Real brand logos (public/brands). `h` is the display height in px, tuned so they read as equal weight. */

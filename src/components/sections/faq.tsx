@@ -1,6 +1,5 @@
-import { Phone, Plus } from "lucide-react"
+import { Plus } from "lucide-react"
 import { getMessages, getTranslations } from "next-intl/server"
-import { site } from "@/lib/site"
 import { Reveal } from "@/components/motion/reveal"
 import { SectionHeading } from "@/components/site/section-heading"
 
@@ -11,55 +10,30 @@ export async function getFaqItems(): Promise<FaqItem[]> {
   return messages.faq?.items ?? []
 }
 
-/** Two columns: sticky heading + phone on the left, a numbered hairline list of questions on the right. */
+/** Centred heading over one quiet column of questions divided by hairlines. */
 export async function Faq() {
   const t = await getTranslations("faq")
-  const tn = await getTranslations("nav")
   const items = await getFaqItems()
 
   return (
-    <section id="vprasanja" aria-labelledby="vprasanja-title" className="scroll-mt-20 bg-paper py-24 md:py-32">
-      <Reveal className="mx-auto grid max-w-[1320px] gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
-        <div className="lg:sticky lg:top-28 lg:self-start">
-          <SectionHeading id="vprasanja-title" title={t("title")} intro={t("intro")} align="left" />
-          <div data-reveal="rise" className="mt-10 border-t border-hairline pt-8">
-            <p className="text-lg font-bold text-graphite">{t("stillTitle")}</p>
-            <p className="mt-1 text-slate">{t("stillText")}</p>
-            <a
-              href={site.phoneHref}
-              className="mt-4 inline-flex items-center gap-2.5 text-[1.35rem] font-bold text-graphite tabular-nums transition-colors hover:text-bronze-ink"
-            >
-              <Phone className="size-5 text-bronze-ink" aria-hidden="true" />
-              {tn("phone")}
-            </a>
-          </div>
-        </div>
+    <section id="vprasanja" aria-labelledby="vprasanja-title" className="scroll-mt-20 bg-paper py-20 md:py-28">
+      <Reveal className="mx-auto max-w-[1320px] px-5 md:px-8">
+        <SectionHeading id="vprasanja-title" title={t("title")} intro={t("intro")} />
 
-        <div className="border-t border-hairline">
-          {items.map((item, i) => (
-            <details
-              key={item.q}
-              data-reveal="rise"
-              name="faq"
-              open={i === 0}
-              className="faq-item group border-b border-hairline"
-            >
-              <summary className="flex cursor-pointer list-none items-baseline gap-5 py-6 text-left [&::-webkit-details-marker]:hidden md:gap-7 md:py-7">
-                <span className="font-display-tight w-8 shrink-0 text-[1.35rem] font-extrabold text-bronze-strong tabular-nums">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="flex-1 text-[1.15rem] leading-snug font-bold text-graphite transition-colors group-hover:text-bronze-ink md:text-[1.3rem]">
+        <div className="mx-auto mt-12 max-w-[64rem] border-t border-hairline md:mt-14">
+          {items.map((item) => (
+            <details key={item.q} data-reveal="rise" name="faq" className="faq-item group border-b border-hairline">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-1 py-5 text-left md:px-4 md:py-6 [&::-webkit-details-marker]:hidden">
+                <span className="text-[1.08rem] leading-snug font-semibold text-graphite transition-colors group-hover:text-bronze-ink md:text-[1.15rem]">
                   {item.q}
                 </span>
                 <Plus
-                  className="size-6 shrink-0 self-center text-graphite transition-transform duration-300 group-open:rotate-45"
-                  strokeWidth={1.5}
+                  className="size-5 shrink-0 text-bronze-ink transition-transform duration-300 group-open:rotate-45"
+                  strokeWidth={1.75}
                   aria-hidden="true"
                 />
               </summary>
-              <p className="pr-10 pb-7 pl-[3.25rem] text-[1.05rem] leading-relaxed text-slate md:pl-[3.75rem]">
-                {item.a}
-              </p>
+              <p className="max-w-[52rem] px-1 pb-6 text-[1.02rem] leading-relaxed text-slate md:px-4">{item.a}</p>
             </details>
           ))}
         </div>

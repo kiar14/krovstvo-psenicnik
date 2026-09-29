@@ -150,30 +150,26 @@
       "ref-12": "Lesen nadstrešek za avto",
       "ref-04": "Glazirana kritina",
       "ref-08": "Strešna okna v antracitni kritini",
-      "ref-02": "Antracitna kritina, večja hiša",
-      "ref-01": "Naše vozilo, pripravljeno na teren",
-      "ref-10": "Tesarska in krovska dela"
+      "ref-13": "Cevni oder in obnova zvonika, Avstrija",
+      "ref-14": "Nova kritina na meščanski hiši"
     }
   },
   "brands": {
-    "title": "Kritine in materiali, s katerimi delamo",
-    "intro": "Svetujemo neodvisno od proizvajalca in izberemo, kar ustreza vaši hiši in proračunu."
+    "title": "Delamo z najboljšimi materiali"
   },
   "about": {
-    "title": "Mojster na vaši strehi",
+    "title": "Streho zaupajte pravemu",
+    "titleAccent": "mojstru.",
     "p1": "Podjetje vodi Tomo Pšeničnik, mojster klepar-krovec z opravljenim mojstrskim izpitom. Od leta 2010 z ekipo prekrivamo, obnavljamo in urejamo strehe v Libeličah, Dravogradu in okolici ter v sosednji Avstriji.",
     "p2": "Vsaka streha je drugačna. Zato rešitev vedno prilagodimo hiši, njeni namembnosti in vašemu proračunu. Delo opravimo tako, kot bi ga zase.",
-    "photoPlaceholder": "Fotografija: Tomo in ekipa",
-    "photoNote": "prihaja kmalu",
-    "badge": "Mojstrski izpit",
-    "badgeSub": "klepar-krovec",
-    "idTitle": "Osebna izkaznica",
-    "idCompany": "Podjetje",
-    "idAddress": "Naslov",
-    "idLead": "Vodja",
-    "idLeadValue": "Tomo Pšeničnik, mojster klepar-krovec",
-    "idVat": "ID za DDV",
-    "idReg": "Matična številka"
+    "points": [
+      "Mojstrski izpit za kleparja-krovca.",
+      "Krovstvo, kleparstvo in tesarstvo iz ene roke.",
+      "Delamo v Sloveniji in sosednji Avstriji."
+    ],
+    "link": "Pogovorimo se o vaši strehi",
+    "imageAlt": "Obnova dimnikov na strehi v Pliberku, Avstrija",
+    "stamp": "Z vami že od 2010."
   },
   "area": {
     "title": "Kje delamo",
@@ -186,7 +182,7 @@
     "openMap": "Odpri v Google Zemljevidih"
   },
   "cta": {
-    "title": "Streha, ki zdrži. Rok, ki drži.",
+    "title": "Pripravljeni na novo streho?",
     "text": "Pokličite za ogled ali nam pošljite povpraševanje.",
     "button": "Pošljite povpraševanje"
   },
@@ -230,8 +226,6 @@
         "q": "Ali delate tudi v Avstriji?",
         "a": "Da. Poleg Libelič, Dravograda, Raven na Koroškem, Prevalj, Vuzenice in okolice delamo tudi v sosednji avstrijski Koroški."
       }
-    ],
-    "stillTitle": "Vašega vprašanja ni na seznamu?",
-    "stillText": "Pokličite nas, z veseljem odgovorimo."
+    ]
   }
 }
