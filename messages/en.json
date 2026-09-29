@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "title": "Roofing, Sheet Metal and Carpentry Pšeničnik | Koroška & Carinthia",
+    "description": "Master roofer and sheet metal worker from Libeliče on the Austrian border. New roofs, roof renovation, gutters, roof trusses, roof windows and lightning protection in Slovenia and Austria. At your service since 2010."
+  },
+  "nav": {
+    "services": "Services",
+    "references": "Projects",
+    "about": "About us",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu",
+    "call": "Call us",
+    "skip": "Skip to content",
+    "home": "Pšeničnik, home page",
+    "language": "Language",
+    "phone": "+386 41 757 179",
+    "faq": "FAQ",
+    "languageNames": {
+      "sl": "Slovenščina",
+      "de": "Deutsch",
+      "en": "English"
+    },
+    "languageToggle": "Choose language",
+    "inquiry": "Send an inquiry",
+    "servicesMenu": "Show services"
+  },
+  "hero": {
+    "line1": "Fast.",
+    "line2": "Clean work.",
+    "line3": "On the agreed date.",
+    "lead": "Roofing, sheet metal and carpentry work for homes in Slovenian Koroška and Austrian Carinthia. Led by a master roofer and sheet metal worker, from the first site visit to the last detail.",
+    "cta": "Send an inquiry",
+    "before": "Before",
+    "after": "After",
+    "compare": "Compare the old and the new roof",
+    "imageAlt": "Family house: an old, weathered roof and the same house with a new clay tile roof, roof windows and gutters"
+  },
+  "trust": {
+    "master": {
+      "title": "Master craftsman",
+      "text": "Roofer & sheet metal worker (OZS)"
+    },
+    "deadline": {
+      "title": "On schedule",
+      "text": "and quick to respond"
+    },
+    "since": {
+      "title": "At your service since 2010",
+      "text": "Family business from Libeliče",
+      "caption": "At your service since 2010"
+    },
+    "allInOne": {
+      "title": "All from one team",
+      "text": "Roofing, sheet metal, carpentry"
+    },
+    "austria": {
+      "title": "Also in Austria",
+      "text": "Koroška and Carinthia"
+    }
+  },
+  "services": {
+    "title": "Everything for your roof from one team",
+    "intro": "From the roof truss to the last gutter. Because we do everything ourselves, no trade is left waiting on another.",
+    "ask": "Inquire",
+    "items": {
+      "krovstvo": {
+        "title": "Roofing & flat roofs",
+        "text": "New roofs, re-roofing, roof insulation and flat roofs."
+      },
+      "kleparstvo": {
+        "title": "Sheet metal work",
+        "text": "Gutters, downpipes, flashings, snow guards and custom sheet metal work."
+      },
+      "tesarstvo": {
+        "title": "Carpentry & carports",
+        "text": "Roof trusses, dormers, truss renovation, carports and pergolas."
+      },
+      "stresnaOkna": {
+        "title": "Roof windows & skylights",
+        "text": "Standard and panoramic roof windows with flashing kits for any roof covering."
+      },
+      "strelovodi": {
+        "title": "Lightning protection",
+        "text": "Installation of lightning protection systems, measurements and inspection certificate."
+      },
+      "visinskaDela": {
+        "title": "Work at height",
+        "text": "Aerial work platform, facade and suspended scaffolding, roof and gutter cleaning."
+      }
+    }
+  },
+  "form": {
+    "line1": "Your roof.",
+    "line2": "Our craft.",
+    "line3": "A fixed date.",
+    "lead": "Planning a new roof, re-roofing or a repair? Tell us what you need and we will arrange a site visit.",
+    "callLabel": "Or give us a call",
+    "name": "Full name",
+    "phone": "Phone",
+    "service": "Service",
+    "servicePlaceholder": "Choose a service",
+    "other": "Other",
+    "message": "Message",
+    "optional": "(optional)",
+    "messagePlaceholder": "Location, roof type, what needs to be done …",
+    "submit": "Send inquiry",
+    "sending": "Sending …",
+    "demoNote": "Demo form. Data is neither sent nor stored.",
+    "successTitle": "Thank you, {name}!",
+    "successText": "Your inquiry has arrived. We will get back to you within one working day to arrange a site visit.",
+    "again": "Send another inquiry",
+    "errorGeneric": "Sending failed. Please try again or call us: +386 41 757 179.",
+    "errors": {
+      "name": "Please enter your name.",
+      "phone": "Please enter a phone number where we can reach you.",
+      "service": "Please choose a service.",
+      "message": "The message is too long (max. 1000 characters)."
+    }
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "From site visit to new roof",
+    "steps": {
+      "1": {
+        "title": "Call or write",
+        "text": "Tell us what needs to be done, by phone or through the form."
+      },
+      "2": {
+        "title": "Site visit & measuring",
+        "text": "We come by, measure the roof and advise you on the roof covering."
+      },
+      "3": {
+        "title": "Quote & date",
+        "text": "You receive a quote and a work date that we agree on together."
+      },
+      "4": {
+        "title": "Work done on schedule",
+        "text": "We work on the agreed date and hand over the roof together with you."
+      }
+    }
+  },
+  "references": {
+    "title": "Our projects",
+    "intro": "A selection of projects from the region, from family houses to carports.",
+    "video": "Our company video",
+    "videoPlay": "Play video",
+    "items": {
+      "ref-06": "Dormers and roof windows",
+      "ref-09": "Flat roof, new build",
+      "ref-12": "Wooden carport",
+      "ref-04": "Glazed roof tiles",
+      "ref-08": "Roof windows in an anthracite roof",
+      "ref-13": "Tube scaffolding and church tower renovation, Austria",
+      "ref-14": "New roof on a town house"
+    }
+  },
+  "brands": {
+    "title": "We work with the best materials"
+  },
+  "about": {
+    "title": "Your roof in the hands of a",
+    "titleAccent": "master.",
+    "p1": "The business is run by Tomo Pšeničnik, a certified master sheet metal worker and roofer. Since 2010, together with our team, we have been covering, renovating and maintaining roofs in Libeliče, Dravograd and the surrounding area, as well as in neighbouring Carinthia.",
+    "p2": "Every roof is different. That is why we always tailor the solution to the house, how it is used and your budget. We work as if it were our own.",
+    "points": [
+      "Master craftsman exam as a sheet metal worker and roofer.",
+      "Roofing, sheet metal and carpentry work from one team.",
+      "We work in Slovenia and in neighbouring Austria."
+    ],
+    "link": "Let's talk about your roof",
+    "imageAlt": "Chimney renovation on a roof in Bleiburg, Austria",
+    "stamp": "By your side since 2010."
+  },
+  "area": {
+    "title": "Where we work",
+    "intro": "We are based in Libeliče, right on the border with Carinthia. We work throughout the surrounding area:",
+    "austria": "Austria",
+    "slovenia": "Slovenia",
+    "base": "Our base",
+    "alsoAustria": "…and in neighbouring Carinthia.",
+    "mapTitle": "Map: Libeliče and surroundings",
+    "openMap": "Open in Google Maps"
+  },
+  "cta": {
+    "title": "Ready for a new roof?",
+    "text": "Call us to arrange a site visit or send us an inquiry.",
+    "button": "Send an inquiry"
+  },
+  "footer": {
+    "tagline": "Roofing, sheet metal and carpentry from Libeliče. At your service since 2010.",
+    "services": "Services",
+    "contact": "Contact",
+    "hours": "Opening hours",
+    "weekdays": "Mon–Fri",
+    "saturday": "Saturday",
+    "byAppointment": "by appointment",
+    "sunday": "Sunday",
+    "closed": "closed",
+    "rights": "All rights reserved."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "intro": "Answers to the questions customers ask us most often before work begins.",
+    "items": [
+      {
+        "q": "How much does a new roof or re-roofing cost?",
+        "a": "The price depends on the size and shape of the roof, the chosen roof covering and the condition of the roof truss. That is why we first inspect and measure the roof and then prepare a quote for your house."
+      },
+      {
+        "q": "Which roof covering should I choose?",
+        "a": "We work with clay, concrete, metal, bitumen and fibre cement roofing, as well as stone-coated metal roof panels. We advise you based on roof pitch, snow load, the look of the house and your budget."
+      },
+      {
+        "q": "Do you take care of all the work on the roof?",
+        "a": "Yes. We do the roofing, sheet metal and carpentry work, roof windows, lightning protection and work at height ourselves, so you don't need any other contractors."
+      },
+      {
+        "q": "When can you start?",
+        "a": "The start date depends on the season and the scope of the work. We agree on the work date together with the quote and we stick to it."
+      },
+      {
+        "q": "Do you issue an inspection certificate for lightning protection?",
+        "a": "Yes. After installation we measure the system and issue a certificate confirming the lightning protection system is in proper order."
+      },
+      {
+        "q": "Do you also work in Austria?",
+        "a": "Yes. Besides Libeliče, Dravograd, Ravne na Koroškem, Prevalje, Vuzenica and the surrounding area, we also work in neighbouring Carinthia."
+      }
+    ]
+  }
+}

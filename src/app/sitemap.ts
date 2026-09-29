@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: site.url,
       lastModified: new Date(),
-      alternates: { languages: { sl: site.url, de: `${site.url}/de` } },
+      alternates: { languages: { sl: site.url, de: `${site.url}/de`, en: `${site.url}/en` } },
     },
   ]
 }

@@ -6,15 +6,16 @@ import { Check, ChevronDown } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 import { cn } from "cn"
 import { Link, usePathname } from "@/i18n/navigation"
-import { FlagDE, FlagSI } from "./flags"
+import { FlagDE, FlagGB, FlagSI } from "./flags"
 
 const options = [
   { locale: "sl", code: "SL", Flag: FlagSI },
   { locale: "de", code: "DE", Flag: FlagDE },
+  { locale: "en", code: "EN", Flag: FlagGB },
 ] as const
 
 /**
- * Compact switch: flag + two letters. Tapping it opens a small menu with the other language.
+ * Compact switch: flag + two letters. Tapping it opens a small menu with the other languages.
  * `tone` matches the surface underneath, `placement` opens the menu up (footer) or down (header).
  */
 export function LanguageSwitch({

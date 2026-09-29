@@ -30,6 +30,8 @@ const display = Big_Shoulders({
   preload: false,
 })
 
+const ogLocales = { sl: "sl_SI", de: "de_AT", en: "en_GB" } as const
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
@@ -48,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t("description"),
     alternates: {
       canonical: path,
-      languages: { sl: "/", de: "/de", "x-default": "/" },
+      languages: { sl: "/", de: "/de", en: "/en", "x-default": "/" },
     },
     openGraph: {
       type: "website",
@@ -56,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("title"),
       description: t("description"),
       url: path,
-      locale: locale === "de" ? "de_AT" : "sl_SI",
+      locale: ogLocales[locale as keyof typeof ogLocales] ?? "sl_SI",
       images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.name }],
     },
     twitter: { card: "summary_large_image" },
