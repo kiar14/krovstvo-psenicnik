@@ -61,7 +61,7 @@ export async function Hero() {
       <section
         id="top"
         aria-labelledby="hero-title"
-        className="relative isolate h-[92svh] min-h-[620px] overflow-hidden bg-navy-ink [--trust-h:136px] md:h-svh md:min-h-[720px] md:max-h-[1100px]"
+        className="relative isolate -mt-[var(--header-h)] h-svh min-h-[calc(620px+var(--header-h))] overflow-hidden bg-navy-ink [--trust-h:136px] md:min-h-[calc(720px+var(--header-h))] md:max-h-[calc(1100px+var(--header-h))]"
       >
         <HeroCompare
           labels={{ before: t("before"), after: t("after"), compare: t("compare"), alt: t("imageAlt") }}
@@ -70,7 +70,7 @@ export async function Hero() {
         <Reveal
           on="load"
           delay={0.15}
-          className="relative z-10 flex h-full flex-col px-5 pt-24 pb-6 md:pl-14 lg:pl-20 2xl:pl-28 [text-shadow:0_2px_28px_rgb(0_22_63/0.55),0_1px_3px_rgb(0_22_63/0.35)] sm:px-6 md:justify-center md:pt-16 md:pb-[var(--trust-h)]"
+          className="relative z-10 flex h-full flex-col px-5 pt-[calc(var(--header-h)+2.25rem)] pb-6 md:pl-14 lg:pl-20 2xl:pl-28 [text-shadow:0_2px_28px_rgb(0_22_63/0.55),0_1px_3px_rgb(0_22_63/0.35)] sm:px-6 md:justify-center md:pt-[var(--header-h)] md:pb-[var(--trust-h)]"
         >
           <div className="flex h-full max-w-[40rem] flex-col justify-between md:block md:h-auto">
             <h1

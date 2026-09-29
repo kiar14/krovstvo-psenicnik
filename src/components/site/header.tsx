@@ -153,7 +153,7 @@ export function Header() {
       >
         {t("skip")}
       </a>
-      <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-graphite/10 bg-paper/80 backdrop-blur-xl backdrop-saturate-150">
+      <header className="site-header">
         <div className="grid h-full grid-cols-[auto_1fr_auto] items-center gap-4 px-4 sm:px-6 2xl:px-10 xl:grid-cols-[1fr_auto_1fr]">
           <a href="#top" aria-label={t("home")} className="justify-self-start">
             <LogoFull tone="color" className="h-auto w-[168px] sm:w-[184px]" />
