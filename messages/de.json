@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dachdecker, Spengler und Zimmerei Pšeničnik | Kärnten & Koroška",
-    "description": "Dachdecker- und Spenglermeister aus Libeliče an der Kärntner Grenze. Neue Dächer, Dachsanierung, Dachrinnen, Dachstühle, Dachfenster und Blitzschutz, in Slowenien und Österreich. Seit 2010 für Sie da."
+    "description": "Dachdecker- und Spenglermeister aus Libeliče an der Kärntner Grenze. Neue Dächer, Dachsanierung, Dachrinnen, Dachstühle, Dachfenster und Blitzschutz in Slowenien und Österreich. Seit 2010 für Sie da."
   },
   "nav": {
     "services": "Leistungen",
@@ -90,7 +90,7 @@
     "line1": "Ihr Dach.",
     "line2": "Unser Können.",
     "line3": "Ein fixer Termin.",
-    "lead": "Sie planen ein neues Dach, eine Neueindeckung oder eine Reparatur? Sagen Sie uns, was Sie brauchen, wir vereinbaren eine Besichtigung.",
+    "lead": "Sie planen ein neues Dach, eine Neueindeckung oder eine Reparatur? Sagen Sie uns, was Sie brauchen, und wir vereinbaren eine Besichtigung.",
     "callLabel": "Oder rufen Sie uns an",
     "name": "Vor- und Nachname",
     "phone": "Telefon",
@@ -154,12 +154,12 @@
   },
   "brands": {
     "title": "Dachdeckungen und Materialien, mit denen wir arbeiten",
-    "intro": "Wir beraten herstellerunabhängig, und wählen, was zu Ihrem Haus und Budget passt."
+    "intro": "Wir beraten herstellerunabhängig und wählen, was zu Ihrem Haus und Budget passt."
   },
   "about": {
     "title": "Ein Meister auf Ihrem Dach",
     "p1": "Der Betrieb wird von Tomo Pšeničnik geführt, Spengler- und Dachdeckermeister mit abgelegter Meisterprüfung. Seit 2010 decken, sanieren und pflegen wir mit unserem Team Dächer in Libeliče, Dravograd und Umgebung sowie im benachbarten Kärnten.",
-    "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an, und arbeiten so, als wäre es unser eigenes.",
+    "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an. Wir arbeiten so, als wäre es unser eigenes.",
     "photoPlaceholder": "Foto: Tomo und das Team",
     "photoNote": "folgt in Kürze",
     "badge": "Meisterprüfung",
