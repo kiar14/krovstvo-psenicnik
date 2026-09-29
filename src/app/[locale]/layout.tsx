@@ -8,6 +8,12 @@ import { site } from "@/lib/site"
 import { SmoothScroll } from "@/components/providers/smooth-scroll"
 import "../globals.css"
 
+/**
+ * Runs before first paint: the browser must not restore the old scroll position, and a reload
+ * of a URL with #section must not jump down either. First visits to a #section link still jump.
+ */
+const startAtTop = `(function(){try{history.scrollRestoration="manual";var n=performance.getEntriesByType("navigation")[0];if(n&&n.type==="reload"&&location.hash){history.replaceState(history.state,"",location.pathname+location.search)}window.scrollTo(0,0)}catch(e){}})()`
+
 const body = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
   variable: "--font-body",
@@ -70,6 +76,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${body.variable} ${display.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: startAtTop }} />
+      </head>
       <body>
         <NextIntlClientProvider>
           <SmoothScroll>{children}</SmoothScroll>
