@@ -30,8 +30,8 @@ export async function Faq() {
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-5 text-left text-[1.15rem] font-bold text-graphite [&::-webkit-details-marker]:hidden">
                 {item.q}
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-spruce text-navy-ink transition-transform duration-300 group-open:rotate-45">
-                  <Plus className="size-5" aria-hidden="true" />
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-spruce text-navy-ink">
+                  <Plus className="size-5 transition-transform duration-300 group-open:rotate-45" aria-hidden="true" />
                 </span>
               </summary>
               <p className="px-6 pb-6 text-[1.05rem] leading-relaxed text-slate">{item.a}</p>

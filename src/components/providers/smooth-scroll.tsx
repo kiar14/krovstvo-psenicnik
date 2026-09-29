@@ -29,7 +29,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <ReactLenis root ref={lenisRef} options={{ autoRaf: false, smoothWheel: !reduced, anchors: { offset: -80 } }}>
+    <ReactLenis root ref={lenisRef} options={{ autoRaf: false, smoothWheel: !reduced, anchors: { offset: -64 } }}>
       <ScrollTriggerSync />
       {children}
     </ReactLenis>

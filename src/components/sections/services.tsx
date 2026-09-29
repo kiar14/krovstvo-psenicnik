@@ -18,7 +18,7 @@ export async function Services() {
 
         <Reveal as="ul" className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-16 lg:grid-cols-3 lg:gap-6">
           {services.map(({ key, image }) => (
-            <li key={key} data-reveal="rise">
+            <li key={key} id={`storitev-${key}`} data-reveal="rise" className="scroll-mt-24">
               <ServiceLink
                 service={key}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl bg-paper shadow-card transition-[box-shadow,translate] duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:shadow-lift"

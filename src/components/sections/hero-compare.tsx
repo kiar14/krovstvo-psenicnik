@@ -109,7 +109,7 @@ export function HeroCompare({ labels }: { labels: Labels }) {
       <picture className="absolute inset-0">
         <source media="(max-width: 767px)" srcSet={before.mobileSet} />
         {/* eslint-disable-next-line jsx-a11y/alt-text -- alt comes from getImageProps */}
-        <img {...before.props} className="size-full object-cover object-[72%_center] md:object-[center_60%]" />
+        <img {...before.props} className="size-full object-cover object-[72%_center] brightness-[0.9] md:object-[center_60%]" />
       </picture>
 
       {showAfter && (
@@ -119,7 +119,7 @@ export function HeroCompare({ labels }: { labels: Labels }) {
           <img
             {...after.props}
             onLoad={onAfterLoad}
-            className="size-full object-cover object-[72%_center] md:object-[center_60%]"
+            className="size-full object-cover object-[72%_center] brightness-[0.9] md:object-[center_60%]"
           />
         </picture>
       )}
@@ -140,7 +140,7 @@ export function HeroCompare({ labels }: { labels: Labels }) {
       <div
         role="group"
         aria-label={labels.compare}
-        className="absolute right-5 bottom-[9.5rem] z-20 sm:bottom-24 flex rounded-full bg-navy-ink/70 p-1 text-sm font-bold text-white ring-1 ring-white/20 backdrop-blur-sm md:right-8 md:bottom-[calc(var(--trust-h)_+_1.5rem)]"
+        className="absolute right-5 bottom-[9.5rem] z-20 sm:bottom-24 flex rounded-lg bg-navy-ink/70 p-1 text-sm font-bold text-white ring-1 ring-white/20 backdrop-blur-sm md:right-8 md:bottom-[calc(var(--trust-h)_+_1.5rem)]"
       >
         {(
           [
@@ -155,7 +155,7 @@ export function HeroCompare({ labels }: { labels: Labels }) {
             aria-pressed={to === 0}
             onClick={() => go(to)}
             className={cn(
-              "min-w-16 rounded-full px-4 py-2 transition-colors duration-300",
+              "min-w-16 rounded-md px-4 py-2 transition-colors duration-300",
               "aria-pressed:bg-spruce aria-pressed:text-navy-ink",
               "hover:text-white aria-pressed:hover:text-navy-ink",
             )}

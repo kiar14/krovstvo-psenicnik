@@ -9,16 +9,16 @@ import { Link, usePathname } from "@/i18n/navigation"
 import { FlagDE, FlagSI } from "./flags"
 
 const options = [
-  { locale: "sl", Flag: FlagSI },
-  { locale: "de", Flag: FlagDE },
+  { locale: "sl", code: "SL", Flag: FlagSI },
+  { locale: "de", code: "DE", Flag: FlagDE },
 ] as const
 
 /**
- * Shows the current language as a full word. Tapping it opens a small menu to pick the other one.
+ * Compact switch: flag + two letters. Tapping it opens a small menu with the other language.
  * `tone` matches the surface underneath, `placement` opens the menu up (footer) or down (header).
  */
 export function LanguageSwitch({
-  tone = "light",
+  tone = "dark",
   placement = "down",
   className,
 }: {
@@ -56,31 +56,29 @@ export function LanguageSwitch({
         aria-expanded={open}
         aria-label={`${t("languageToggle")}: ${t(`languageNames.${current.locale}`)}`}
         className={cn(
-          "inline-flex h-11 items-center gap-2 rounded-full px-3.5 text-[1.05rem] font-semibold ring-1 transition-colors ring-inset",
-          tone === "light"
-            ? "text-white ring-white/35 hover:bg-white/10"
-            : "text-graphite ring-graphite/15 hover:bg-graphite/5",
+          "inline-flex h-10 items-center gap-1.5 rounded-md px-2 text-[0.98rem] font-bold transition-colors",
+          tone === "light" ? "text-white hover:bg-white/10" : "text-graphite hover:bg-graphite/5",
         )}
       >
         <current.Flag className="h-3.5 w-[21px] rounded-[2px] shadow-[0_0_0_1px_rgb(0_0_0/0.15)]" />
-        {t(`languageNames.${current.locale}`)}
-        <ChevronDown className={cn("size-4 transition-transform duration-300", open && "rotate-180")} aria-hidden="true" />
+        {current.code}
+        <ChevronDown className={cn("size-3.5 transition-transform duration-300", open && "rotate-180")} aria-hidden="true" />
       </button>
 
       <AnimatePresence>
         {open && (
           <motion.div
             role="menu"
-            initial={{ opacity: 0, y: placement === "down" ? -6 : 6, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: placement === "down" ? -6 : 6, scale: 0.98 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: placement === "down" ? -6 : 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: placement === "down" ? -6 : 6 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className={cn(
-              "absolute right-0 z-50 min-w-48 overflow-hidden rounded-xl bg-white/90 p-1.5 text-graphite shadow-lift ring-1 ring-black/5 backdrop-blur-xl",
-              placement === "down" ? "top-full mt-2 origin-top-right" : "bottom-full mb-2 origin-bottom-right",
+              "absolute right-0 z-50 min-w-44 overflow-hidden rounded-lg bg-white p-1.5 text-graphite shadow-lift ring-1 ring-black/5",
+              placement === "down" ? "top-full mt-2" : "bottom-full mb-2",
             )}
           >
-            {options.map(({ locale: l, Flag }) => {
+            {options.map(({ locale: l, code, Flag }) => {
               const active = l === locale
               return (
                 <Link
@@ -92,12 +90,13 @@ export function LanguageSwitch({
                   aria-checked={active}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "flex items-center gap-3 rounded-lg px-3 py-2.5 text-[1.02rem] font-semibold transition-colors",
+                    "flex items-center gap-2.5 rounded-md px-3 py-2 font-semibold transition-colors",
                     active ? "bg-cement" : "hover:bg-cement",
                   )}
                 >
                   <Flag className="h-3.5 w-[21px] rounded-[2px] shadow-[0_0_0_1px_rgb(0_0_0/0.15)]" />
-                  <span className="flex-1">{t(`languageNames.${l}`)}</span>
+                  <span className="w-6 font-bold">{code}</span>
+                  <span className="flex-1 text-slate">{t(`languageNames.${l}`)}</span>
                   {active && <Check className="size-4 text-bronze-ink" aria-hidden="true" />}
                 </Link>
               )

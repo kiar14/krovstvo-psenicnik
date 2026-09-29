@@ -20,7 +20,9 @@
       "sl": "Slovenščina",
       "de": "Deutsch"
     },
-    "languageToggle": "Izberite jezik"
+    "languageToggle": "Izberite jezik",
+    "inquiry": "Pošlji povpraševanje",
+    "servicesMenu": "Odpri seznam storitev"
   },
   "hero": {
     "line1": "Hitro.",
@@ -44,7 +46,8 @@
     },
     "since": {
       "title": "Z vami od 2010",
-      "text": "družinsko podjetje iz Libelič"
+      "text": "družinsko podjetje iz Libelič",
+      "caption": "Z vami že od leta 2010"
     },
     "allInOne": {
       "title": "Vse na enem mestu",
@@ -174,11 +177,11 @@
   },
   "area": {
     "title": "Kje delamo",
-    "intro": "Doma smo v Libeličah, tik ob avstrijski meji. Strehe urejamo po vsej okolici.",
+    "intro": "Doma smo v Libeličah, tik ob avstrijski meji. Strehe urejamo po vsej okolici:",
     "austria": "Avstrija",
     "slovenia": "Slovenija",
     "base": "Naš sedež",
-    "alsoAustria": "Delamo tudi v sosednji avstrijski Koroški.",
+    "alsoAustria": "…in v sosednji avstrijski Koroški.",
     "mapTitle": "Zemljevid: Libeliče in okolica",
     "openMap": "Odpri v Google Zemljevidih"
   },

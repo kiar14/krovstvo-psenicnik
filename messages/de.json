@@ -20,7 +20,9 @@
       "sl": "Slovenščina",
       "de": "Deutsch"
     },
-    "languageToggle": "Sprache wählen"
+    "languageToggle": "Sprache wählen",
+    "inquiry": "Anfrage senden",
+    "servicesMenu": "Leistungen anzeigen"
   },
   "hero": {
     "line1": "Schnell.",
@@ -44,7 +46,8 @@
     },
     "since": {
       "title": "Seit 2010 für Sie da",
-      "text": "Familienbetrieb aus Libeliče"
+      "text": "Familienbetrieb aus Libeliče",
+      "caption": "Seit 2010 für Sie da"
     },
     "allInOne": {
       "title": "Alles aus einer Hand",
@@ -174,11 +177,11 @@
   },
   "area": {
     "title": "Wo wir arbeiten",
-    "intro": "Zu Hause sind wir in Libeliče, direkt an der Grenze zu Kärnten. Wir arbeiten in der ganzen Umgebung.",
+    "intro": "Zu Hause sind wir in Libeliče, direkt an der Grenze zu Kärnten. Wir arbeiten in der ganzen Umgebung:",
     "austria": "Österreich",
     "slovenia": "Slowenien",
     "base": "Unser Sitz",
-    "alsoAustria": "Wir arbeiten auch im benachbarten Kärnten.",
+    "alsoAustria": "…und im benachbarten Kärnten.",
     "mapTitle": "Karte: Libeliče und Umgebung",
     "openMap": "In Google Maps öffnen"
   },

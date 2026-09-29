@@ -6,16 +6,24 @@ export function SectionHeading({
   title,
   intro,
   tone = "dark",
+  align = "center",
   className,
 }: {
   id: string
   title: string
   intro?: string
   tone?: "dark" | "light"
+  align?: "center" | "left"
   className?: string
 }) {
   return (
-    <div className={cn("mx-auto flex max-w-3xl flex-col items-center text-center", className)}>
+    <div
+      className={cn(
+        "flex max-w-3xl flex-col",
+        align === "center" ? "mx-auto items-center text-center" : "items-start text-left",
+        className,
+      )}
+    >
       <h2
         id={id}
         className={cn(
@@ -29,7 +37,7 @@ export function SectionHeading({
           </span>
         </span>
       </h2>
-      <span data-reveal="line" aria-hidden="true" className="chalk-line mt-5" />
+      <span data-reveal="line" aria-hidden="true" className={cn("chalk-line mt-5", align === "left" && "origin-left")} />
       {intro && (
         <p
           data-reveal="rise"

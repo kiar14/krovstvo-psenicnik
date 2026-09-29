@@ -195,7 +195,7 @@ export function InquiryForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group inline-flex h-13 w-full items-center justify-center gap-2 rounded-lg bg-spruce px-6 text-[1.05rem] font-bold text-navy-ink transition-colors hover:bg-spruce-hover disabled:cursor-wait disabled:opacity-80 sm:w-auto sm:self-start"
+              className="group inline-flex h-13 w-full items-center justify-center gap-2 rounded-md bg-spruce px-6 text-[1.05rem] font-bold text-navy-ink transition-colors hover:bg-spruce-hover disabled:cursor-wait disabled:opacity-80 sm:w-auto sm:self-start"
             >
               {isSubmitting ? (
                 <>

@@ -32,7 +32,7 @@ export function YouTubeLite({ id, title, playLabel, poster }: { id: string; titl
       />
       <span className="absolute inset-0 bg-[linear-gradient(90deg,rgb(0_22_63/0.78),rgb(0_22_63/0.2))]" />
       <span className="absolute inset-0 flex items-center gap-5 p-6 md:p-8">
-        <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-spruce text-navy-ink transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-110">
+        <span className="flex size-16 shrink-0 items-center justify-center rounded-lg bg-spruce text-navy-ink transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-110">
           <Play className="ml-1 size-7 fill-current" aria-hidden="true" />
         </span>
         <span className="font-display-tight text-3xl font-extrabold text-white uppercase md:text-4xl">{title}</span>

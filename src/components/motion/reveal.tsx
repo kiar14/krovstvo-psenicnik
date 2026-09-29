@@ -52,9 +52,15 @@ export function Reveal({
         if (rise.length) tl.from(rise, { y: 28, autoAlpha: 0, stagger: 0.07 }, 0.1)
         if (pop.length) tl.from(pop, { scale: 0.6, autoAlpha: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.1 }, 0.2)
 
+        // Once the lines have slid in, stop clipping so text shadows and accents aren't cut
+        tl.eventCallback("onComplete", () => mask.forEach((m) => m.parentElement?.style.setProperty("overflow", "visible")))
+
         if (on === "scroll") {
           ScrollTrigger.create({ trigger: root, start: "top 82%", once: true, onEnter: () => tl.play() })
         }
+      })
+      mm.add("(prefers-reduced-motion: reduce)", () => {
+        root.querySelectorAll<HTMLElement>('[data-reveal="mask"]').forEach((m) => m.parentElement?.style.setProperty("overflow", "visible"))
       })
     },
     { scope },
