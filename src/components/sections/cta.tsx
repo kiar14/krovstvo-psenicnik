@@ -11,32 +11,30 @@ export async function Cta() {
       <svg
         aria-hidden="true"
         viewBox="0 0 600 300"
-        className="pointer-events-none absolute -top-10 right-[-6rem] w-[38rem] text-white/[0.06]"
+        className="pointer-events-none absolute -top-10 left-1/2 w-[46rem] -translate-x-1/2 text-white/[0.05]"
       >
         <path d="M20 300 300 20l280 280" fill="none" stroke="currentColor" strokeWidth="34" />
       </svg>
-      <Reveal className="relative mx-auto flex max-w-[1320px] flex-col gap-8 px-5 py-16 md:flex-row md:items-center md:justify-between md:px-8 md:py-20">
-        <div>
-          <h2 id="cta-title" className="font-display-tight text-[clamp(2.4rem,5vw,4rem)] font-extrabold uppercase">
-            <span className="mask-line">
-              <span data-reveal="mask" className="block">{t("title")}</span>
-            </span>
-          </h2>
-          <p data-reveal="rise" className="mt-3 text-lg text-on-navy">
-            {t("text")}
-          </p>
-        </div>
-        <div data-reveal="rise" className="flex flex-wrap gap-3">
+      <Reveal className="relative mx-auto flex max-w-[1320px] flex-col items-center px-5 py-16 text-center md:px-8 md:py-20">
+        <h2 id="cta-title" className="font-display-tight text-[clamp(2.4rem,5vw,4rem)] font-extrabold uppercase">
+          <span className="mask-line">
+            <span data-reveal="mask" className="block">{t("title")}</span>
+          </span>
+        </h2>
+        <p data-reveal="rise" className="mt-4 text-lg text-on-navy">
+          {t("text")}
+        </p>
+        <div data-reveal="rise" className="mt-8 flex flex-wrap justify-center gap-3">
           <a
             href={site.phoneHref}
-            className="inline-flex h-13 items-center gap-2 rounded-lg bg-terracotta px-6 font-bold text-white shadow-[0_10px_24px_-10px_rgb(0_0_0/0.5)] transition-colors hover:bg-terracotta-deep"
+            className="inline-flex h-13 items-center gap-2 rounded-lg bg-spruce px-6 text-[1.05rem] font-bold text-navy-ink transition-colors hover:bg-spruce-hover"
           >
             <Phone className="size-5" aria-hidden="true" />
             {tn("phone")}
           </a>
           <a
             href="#povprasevanje"
-            className="group inline-flex h-13 items-center gap-2 rounded-lg px-6 font-bold ring-1 ring-white/50 transition-colors ring-inset hover:bg-white hover:text-navy"
+            className="group inline-flex h-13 items-center gap-2 rounded-lg px-6 text-[1.05rem] font-bold ring-1 ring-white/50 transition-colors ring-inset hover:bg-white hover:text-navy-ink"
           >
             {t("button")}
             <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />

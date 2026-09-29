@@ -11,6 +11,7 @@ import { Brands } from "@/components/sections/brands"
 import { About } from "@/components/sections/about"
 import { Area } from "@/components/sections/area"
 import { Cta } from "@/components/sections/cta"
+import { Faq, getFaqItems } from "@/components/sections/faq"
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
@@ -47,6 +48,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     ],
   }
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (await getFaqItems()).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  }
+
   return (
     <>
       <div id="top-sentinel" aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-24" />
@@ -60,10 +71,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <Brands />
         <About />
         <Area />
+        <Faq />
         <Cta />
       </main>
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     </>
   )
 }

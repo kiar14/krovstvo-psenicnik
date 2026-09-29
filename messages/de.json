@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dachdecker, Spengler und Zimmerei Pšeničnik | Kärnten & Koroška",
-    "description": "Dachdecker- und Spenglermeister aus Libeliče an der Kärntner Grenze. Neue Dächer, Dachsanierung, Dachrinnen, Dachstühle, Dachfenster und Blitzschutz – in Slowenien und Österreich. Seit 2010 für Sie da."
+    "description": "Dachdecker- und Spenglermeister aus Libeliče an der Kärntner Grenze. Neue Dächer, Dachsanierung, Dachrinnen, Dachstühle, Dachfenster und Blitzschutz, in Slowenien und Österreich. Seit 2010 für Sie da."
   },
   "nav": {
     "services": "Leistungen",
@@ -12,15 +12,21 @@
     "close": "Menü schließen",
     "call": "Rufen Sie uns an",
     "skip": "Zum Inhalt springen",
-    "home": "Pšeničnik – Startseite",
+    "home": "Pšeničnik, Startseite",
     "language": "Sprache",
-    "phone": "+386 41 757 179"
+    "phone": "+386 41 757 179",
+    "faq": "Häufige Fragen",
+    "languageNames": {
+      "sl": "Slovenščina",
+      "de": "Deutsch"
+    },
+    "languageToggle": "Sprache wählen"
   },
   "hero": {
     "line1": "Schnell.",
     "line2": "Sauber gearbeitet.",
     "line3": "Zum vereinbarten Termin.",
-    "lead": "Dachdecker-, Spengler- und Zimmererarbeiten für Häuser in Kärnten und im slowenischen Koroška. Geführt von einem Dachdecker- und Spenglermeister – von der Besichtigung bis zum letzten Detail.",
+    "lead": "Dachdecker-, Spengler- und Zimmererarbeiten für Häuser in Kärnten und im slowenischen Koroška. Geführt von einem Dachdecker- und Spenglermeister, von der Besichtigung bis zum letzten Detail.",
     "cta": "Anfrage senden",
     "before": "Vorher",
     "after": "Nachher",
@@ -84,7 +90,7 @@
     "line1": "Ihr Dach.",
     "line2": "Unser Können.",
     "line3": "Ein fixer Termin.",
-    "lead": "Sie planen ein neues Dach, eine Neueindeckung oder eine Reparatur? Sagen Sie uns, was Sie brauchen – wir vereinbaren eine Besichtigung.",
+    "lead": "Sie planen ein neues Dach, eine Neueindeckung oder eine Reparatur? Sagen Sie uns, was Sie brauchen, wir vereinbaren eine Besichtigung.",
     "callLabel": "Oder rufen Sie uns an",
     "name": "Vor- und Nachname",
     "phone": "Telefon",
@@ -114,7 +120,7 @@
     "steps": {
       "1": {
         "title": "Anrufen oder schreiben",
-        "text": "Sagen Sie uns, was gemacht werden soll – telefonisch oder über das Formular."
+        "text": "Sagen Sie uns, was gemacht werden soll, telefonisch oder über das Formular."
       },
       "2": {
         "title": "Besichtigung & Aufmaß",
@@ -131,8 +137,8 @@
     }
   },
   "references": {
-    "title": "Dächer, die wir gemacht haben",
-    "intro": "Eine Auswahl an Projekten aus der Region – vom Einfamilienhaus bis zum Carport.",
+    "title": "Unsere Projekte",
+    "intro": "Eine Auswahl an Projekten aus der Region, vom Einfamilienhaus bis zum Carport.",
     "video": "Unser Firmenvideo",
     "videoPlay": "Video abspielen",
     "items": {
@@ -148,12 +154,12 @@
   },
   "brands": {
     "title": "Dachdeckungen und Materialien, mit denen wir arbeiten",
-    "intro": "Wir beraten herstellerunabhängig – und wählen, was zu Ihrem Haus und Budget passt."
+    "intro": "Wir beraten herstellerunabhängig, und wählen, was zu Ihrem Haus und Budget passt."
   },
   "about": {
     "title": "Ein Meister auf Ihrem Dach",
     "p1": "Der Betrieb wird von Tomo Pšeničnik geführt, Spengler- und Dachdeckermeister mit abgelegter Meisterprüfung. Seit 2010 decken, sanieren und pflegen wir mit unserem Team Dächer in Libeliče, Dravograd und Umgebung sowie im benachbarten Kärnten.",
-    "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an – und arbeiten so, als wäre es unser eigenes.",
+    "p2": "Jedes Dach ist anders. Darum passen wir die Lösung immer an das Haus, seine Nutzung und Ihr Budget an, und arbeiten so, als wäre es unser eigenes.",
     "photoPlaceholder": "Foto: Tomo und das Team",
     "photoNote": "folgt in Kürze",
     "badge": "Meisterprüfung",
@@ -168,11 +174,13 @@
   },
   "area": {
     "title": "Wo wir arbeiten",
-    "intro": "Zu Hause sind wir in Libeliče, direkt an der Grenze zu Kärnten. Wir arbeiten in der ganzen Umgebung:",
+    "intro": "Zu Hause sind wir in Libeliče, direkt an der Grenze zu Kärnten. Wir arbeiten in der ganzen Umgebung.",
     "austria": "Österreich",
     "slovenia": "Slowenien",
     "base": "Unser Sitz",
-    "alsoAustria": "…und im benachbarten Kärnten."
+    "alsoAustria": "Wir arbeiten auch im benachbarten Kärnten.",
+    "mapTitle": "Karte: Libeliče und Umgebung",
+    "openMap": "In Google Maps öffnen"
   },
   "cta": {
     "title": "Ein Dach, das hält. Ein Termin, der hält.",
@@ -190,5 +198,35 @@
     "sunday": "Sonntag",
     "closed": "geschlossen",
     "rights": "Alle Rechte vorbehalten."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "intro": "Antworten auf die Fragen, die uns Kunden vor Arbeitsbeginn am häufigsten stellen.",
+    "items": [
+      {
+        "q": "Was kostet ein neues Dach oder eine Neueindeckung?",
+        "a": "Der Preis hängt von Größe und Form des Daches, der gewählten Deckung und dem Zustand des Dachstuhls ab. Deshalb besichtigen und vermessen wir das Dach zuerst und erstellen dann ein Angebot für Ihr Haus."
+      },
+      {
+        "q": "Welche Dachdeckung soll ich wählen?",
+        "a": "Wir arbeiten mit Ton-, Beton-, Blech-, Bitumen- und Faserzementdeckungen sowie mit besandeten Blechdachplatten. Wir beraten Sie nach Dachneigung, Schneelast, Optik des Hauses und Budget."
+      },
+      {
+        "q": "Übernehmen Sie alle Arbeiten am Dach?",
+        "a": "Ja. Dachdecker-, Spengler- und Zimmererarbeiten, Dachfenster, Blitzschutz und Arbeiten in der Höhe machen wir selbst, Sie brauchen also keine weiteren Firmen."
+      },
+      {
+        "q": "Wann können Sie beginnen?",
+        "a": "Der Termin hängt von der Saison und vom Umfang der Arbeiten ab. Den Ausführungstermin vereinbaren wir gemeinsam mit dem Angebot und halten ihn ein."
+      },
+      {
+        "q": "Stellen Sie eine Prüfbescheinigung für den Blitzschutz aus?",
+        "a": "Ja. Nach der Montage messen wir die Anlage und stellen eine Bescheinigung über die Ordnungsmäßigkeit der Blitzschutzanlage aus."
+      },
+      {
+        "q": "Arbeiten Sie auch in Österreich?",
+        "a": "Ja. Neben Libeliče, Dravograd, Ravne na Koroškem, Prevalje, Vuzenica und Umgebung arbeiten wir auch im benachbarten Kärnten."
+      }
+    ]
   }
 }

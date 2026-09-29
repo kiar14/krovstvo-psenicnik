@@ -34,15 +34,15 @@ export async function Services() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6 md:p-7">
-                  <h3 className="font-display-tight text-[1.9rem] font-extrabold text-navy uppercase">
+                  <h3 className="font-display-tight text-[1.9rem] font-extrabold text-graphite uppercase">
                     {t(`items.${key}.title`)}
                   </h3>
                   <span
                     aria-hidden="true"
-                    className="chalk-line mt-3 w-10 scale-x-50 transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-x-100"
+                    className="chalk-line mt-3 w-10 origin-left scale-x-50 transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-x-100"
                   />
                   <p className="mt-4 text-slate">{t(`items.${key}.text`)}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-6 font-bold text-terracotta">
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-6 font-bold text-bronze-ink">
                     {t("ask")}
                     <ArrowUpRight
                       className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

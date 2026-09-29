@@ -40,21 +40,15 @@ export const references = [
   { id: "ref-10", span: "one" },
 ] as const
 
+/** Real brand logos (public/brands). `h` is the display height in px, tuned so they read as equal weight. */
 export const brands = [
-  "Tondach",
-  "Creaton",
-  "Bramac",
-  "Decra",
-  "Prefa",
-  "Rheinzink",
-  "Braas",
-  "Erlus",
-  "Jungmeier",
-  "Terran",
-  "Gerard",
-  "Tegola",
-  "Eternit",
-  "Esal",
+  { name: "Wienerberger (Tondach)", src: "/brands/wienerberger.svg", w: 644, h: 101, display: 30 },
+  { name: "Creaton", src: "/brands/creaton.png", w: 520, h: 146, display: 46 },
+  { name: "Braas", src: "/brands/braas.svg", w: 760, h: 340, display: 52 },
+  { name: "Prefa", src: "/brands/prefa.png", w: 320, h: 320, display: 66 },
+  { name: "Erlus", src: "/brands/erlus.svg", w: 1026, h: 332, display: 42 },
+  { name: "Rheinzink", src: "/brands/rheinzink.png", w: 318, h: 56, display: 30 },
+  { name: "Eternit", src: "/brands/eternit.svg", w: 336, h: 96, display: 40 },
 ] as const
 
 export const towns = ["Libeliče", "Dravograd", "Otiški vrh", "Ravne na Koroškem", "Prevalje", "Vuzenica"] as const

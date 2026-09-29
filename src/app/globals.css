@@ -29,10 +29,12 @@
   --color-navy: #002d8a;
   --color-navy-deep: #001f5f;
   --color-navy-ink: #00163f;
-  --color-terracotta: #ba3201;
-  --color-terracotta-deep: #9a2900;
+  /* Golden bronze: the only accent. Never red. */
   --color-spruce: #d9a864;
+  --color-spruce-hover: #cb9a55;
   --color-spruce-soft: #ecd3ad;
+  --color-bronze-strong: #a5742f; /* large bronze text on light */
+  --color-bronze-ink: #8a5e22; /* small bronze text on light */
   --color-graphite: #1c2126;
   --color-slate: #4a535c;
   --color-cement: #eef0f1;
@@ -81,7 +83,7 @@
     color: var(--color-navy-ink);
   }
   :focus-visible {
-    outline: 2px solid var(--color-terracotta);
+    outline: 2px solid var(--color-bronze-ink);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -92,7 +94,7 @@
   input,
   textarea,
   select {
-    caret-color: var(--color-terracotta);
+    caret-color: var(--color-bronze-ink);
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -120,8 +122,8 @@
 @utility mask-line {
   display: block;
   overflow: hidden;
-  padding-block: 0.16em 0.06em;
-  margin-block: -0.16em -0.06em;
+  padding-block: 0.24em 0.06em;
+  margin-block: -0.24em -0.06em;
 }
 
 /* The chalk line: a carpenter's snapped line under headings */
@@ -131,7 +133,7 @@
   width: 4.5rem;
   border-radius: 2px;
   background: var(--color-spruce);
-  transform-origin: left center;
+  transform-origin: center;
 }
 
 @utility pitch-rule {

@@ -73,7 +73,7 @@ export function InquiryForm() {
           <span className="flex size-14 items-center justify-center rounded-full bg-navy text-white">
             <Check className="size-7" strokeWidth={2.5} aria-hidden="true" />
           </span>
-          <p className="font-display-tight mt-6 text-5xl font-extrabold text-navy uppercase">{t("successTitle", { name: done })}</p>
+          <p className="font-display-tight mt-6 text-5xl font-extrabold text-graphite uppercase">{t("successTitle", { name: done })}</p>
           <p className="mt-3 max-w-md text-lg text-slate">{t("successText")}</p>
           <button
             type="button"
@@ -81,7 +81,7 @@ export function InquiryForm() {
               reset()
               setDone(null)
             }}
-            className="mt-8 font-bold text-terracotta underline decoration-terracotta/40 hover:decoration-terracotta"
+            className="mt-8 font-bold text-bronze-ink underline decoration-bronze-ink/40 hover:decoration-bronze-ink"
           >
             {t("again")}
           </button>
@@ -195,7 +195,7 @@ export function InquiryForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group inline-flex h-13 w-full items-center justify-center gap-2 rounded-lg bg-terracotta px-6 font-bold text-white shadow-[0_10px_24px_-12px_rgb(186_50_1/0.9)] transition-colors hover:bg-terracotta-deep disabled:cursor-wait disabled:opacity-80 sm:w-auto sm:self-start"
+              className="group inline-flex h-13 w-full items-center justify-center gap-2 rounded-lg bg-spruce px-6 text-[1.05rem] font-bold text-navy-ink transition-colors hover:bg-spruce-hover disabled:cursor-wait disabled:opacity-80 sm:w-auto sm:self-start"
             >
               {isSubmitting ? (
                 <>

@@ -17,27 +17,28 @@ export async function About() {
 
   return (
     <section id="o-nas" aria-labelledby="o-nas-title" className="scroll-mt-20 bg-paper py-24 md:py-32">
-      <Reveal className="mx-auto grid max-w-[1320px] gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-20">
+      <Reveal className="mx-auto max-w-[1320px] px-5 md:px-8">
+        <SectionHeading id="o-nas-title" title={t("title")} />
+        <div className="mt-14 grid items-center gap-12 md:mt-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-20">
         {/* PLACEHOLDER: replace with a real photo of Tomo and the team (4:5) */}
         <div data-reveal="rise" className="relative mb-10 lg:mb-0">
           <div className="relative flex aspect-[4/3] flex-col items-center justify-center pb-14 sm:aspect-[4/5] sm:pb-0 overflow-hidden rounded-2xl border-2 border-dashed border-spruce bg-[repeating-linear-gradient(-40deg,var(--color-cement)_0_18px,var(--color-cement-deep)_18px_19px)] text-center">
-            <Camera className="size-10 text-navy/60" strokeWidth={1.5} aria-hidden="true" />
-            <p className="font-display-tight mt-4 text-3xl font-extrabold text-navy uppercase">{t("photoPlaceholder")}</p>
+            <Camera className="size-10 text-graphite/50" strokeWidth={1.5} aria-hidden="true" />
+            <p className="font-display-tight mt-4 text-3xl font-extrabold text-graphite uppercase">{t("photoPlaceholder")}</p>
             <p className="mt-1 text-slate">{t("photoNote")}</p>
           </div>
           <div className="absolute -right-2 -bottom-10 flex size-32 sm:-right-3 sm:-bottom-6 sm:size-36 flex-col items-center justify-center rounded-full bg-navy text-center text-white shadow-lift ring-4 ring-paper md:-right-8 md:size-40">
             <svg viewBox="0 0 24 14" className="h-3 w-6 text-spruce" aria-hidden="true">
               <path d="M1 13 12 2l11 11" fill="none" stroke="currentColor" strokeWidth="2.5" />
             </svg>
-            <span className="font-display-tight mt-2 text-2xl font-extrabold uppercase">{t("badge")}</span>
+            <span className="font-display-tight mt-2 text-lg leading-none font-extrabold uppercase sm:text-2xl">{t("badge")}</span>
             <span className="mt-1 text-xs font-bold tracking-[0.12em] text-on-navy uppercase">{t("badgeSub")}</span>
             <span className="mt-1 text-xs font-bold text-spruce">OZS</span>
           </div>
         </div>
 
-        <div className="lg:pt-6">
-          <SectionHeading id="o-nas-title" title={t("title")} align="stack" />
-          <div data-reveal="rise" className="mt-8 max-w-[38rem] space-y-5 text-lg leading-relaxed text-graphite">
+        <div>
+          <div data-reveal="rise" className="max-w-[38rem] space-y-5 text-lg leading-relaxed text-graphite">
             <p>{t("p1")}</p>
             <p>{t("p2")}</p>
           </div>
@@ -53,6 +54,7 @@ export async function About() {
               ))}
             </dl>
           </div>
+        </div>
         </div>
       </Reveal>
     </section>

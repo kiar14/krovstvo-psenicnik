@@ -18,7 +18,7 @@ export function LogoFull({ tone = "color", className }: { tone?: "color" | "whit
   return (
     <Image
       src={tone === "white" ? "/brand/logo-white.svg" : "/brand/logo.svg"}
-      alt="PŠENIČNIK – krovstvo, kleparstvo, tesarstvo"
+      alt="PŠENIČNIK, krovstvo, kleparstvo, tesarstvo"
       width={1012}
       height={210}
       unoptimized

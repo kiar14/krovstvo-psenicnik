@@ -59,23 +59,13 @@ export async function Hero() {
           labels={{ before: t("before"), after: t("after"), compare: t("compare"), alt: t("imageAlt") }}
         />
 
-        {/* Legibility scrims: top-down on phones, left-to-right on larger screens */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgb(0_22_63/0.82)_0%,rgb(0_22_63/0.55)_38%,rgb(0_22_63/0)_62%)] md:bg-[linear-gradient(90deg,rgb(0_22_63/0.86)_0%,rgb(0_22_63/0.62)_34%,rgb(0_22_63/0)_62%)]"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[linear-gradient(0deg,rgb(0_22_63/0.85),rgb(0_22_63/0))] md:h-56 md:bg-[linear-gradient(0deg,rgb(0_22_63/0.6),rgb(0_22_63/0))]"
-        />
-
         <Reveal
           on="load"
           delay={0.15}
-          className="relative z-10 mx-auto flex h-full max-w-[1320px] flex-col px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-16 md:pb-[var(--trust-h)]"
+          className="relative z-10 mx-auto flex h-full max-w-[1320px] flex-col px-5 pt-28 pb-6 md:justify-center md:px-8 md:pt-20 md:pb-[var(--trust-h)]"
         >
-          <div className="flex h-full max-w-[40rem] flex-col justify-between md:block md:h-auto">
-            <h1 id="hero-title" className="font-display-tight text-[clamp(2.9rem,7.2vw,5.25rem)] font-extrabold text-white uppercase">
+          <div className="flex h-full max-w-[36rem] flex-col justify-between md:block md:h-auto md:rounded-2xl md:bg-navy-ink/40 md:p-10 md:ring-1 md:ring-white/15 md:backdrop-blur-md">
+            <h1 id="hero-title" className="font-display-tight rounded-xl bg-navy-ink/40 p-5 text-[clamp(2.7rem,6.4vw,4.6rem)] font-extrabold text-white uppercase ring-1 ring-white/15 backdrop-blur-md md:rounded-none md:bg-transparent md:p-0 md:ring-0 md:backdrop-blur-none">
               <span className="mask-line">
                 <span data-reveal="mask" className="block">{t("line1")}</span>
               </span>
@@ -86,20 +76,20 @@ export async function Hero() {
                 <span data-reveal="mask" className="block text-spruce">{t("line3")}</span>
               </span>
             </h1>
-            <p data-reveal="rise" className="mt-7 hidden max-w-[31rem] text-lg leading-relaxed text-white/90 md:block">
+            <p data-reveal="rise" className="mt-6 hidden text-lg leading-relaxed text-white md:block">
               {t("lead")}
             </p>
-            <div data-reveal="rise" className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3 md:mt-9">
+            <div data-reveal="rise" className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3 md:mt-8">
               <a
                 href="#povprasevanje"
-                className="group inline-flex h-13 items-center justify-center gap-2 rounded-lg bg-terracotta px-6 text-[1.02rem] font-bold text-white shadow-[0_10px_24px_-10px_rgb(186_50_1/0.9)] transition-colors hover:bg-terracotta-deep"
+                className="group inline-flex h-13 items-center justify-center gap-2 rounded-lg bg-spruce px-6 text-[1.05rem] font-bold text-navy-ink transition-colors hover:bg-spruce-hover"
               >
                 {t("cta")}
                 <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
               </a>
               <a
                 href={site.phoneHref}
-                className="inline-flex h-13 items-center justify-center gap-2 rounded-lg bg-navy-ink/30 px-5 text-[1.02rem] font-bold text-white ring-1 ring-white/60 transition-colors ring-inset hover:bg-white hover:text-navy"
+                className="inline-flex h-13 items-center justify-center gap-2 rounded-lg bg-white/10 px-5 text-[1.05rem] font-bold text-white ring-1 ring-white/60 backdrop-blur-md transition-colors ring-inset hover:bg-white hover:text-navy-ink"
               >
                 <Phone className="size-5" aria-hidden="true" />
                 {tn("phone")}

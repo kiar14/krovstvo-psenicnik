@@ -1,26 +1,32 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 import { brands } from "@/lib/site"
 
 function Row({ hidden }: { hidden?: boolean }) {
   return (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {brands.map((b) => (
-        <li key={b} className="flex items-center">
-          <span className="font-display-tight px-8 text-[2.4rem] font-bold whitespace-nowrap text-slate/55 uppercase transition-colors duration-300 hover:text-navy md:px-12 md:text-[2.9rem]">
-            {b}
-          </span>
-          <svg viewBox="0 0 24 14" className="h-3 w-5 text-spruce" aria-hidden="true">
-            <path d="M1 13 12 2l11 11" fill="none" stroke="currentColor" strokeWidth="2.5" />
-          </svg>
+        <li key={b.name} className="flex h-24 items-center px-10 md:px-14">
+          <Image
+            src={b.src}
+            alt={hidden ? "" : b.name}
+            width={b.w}
+            height={b.h}
+            unoptimized={b.src.endsWith(".svg")}
+            sizes="200px"
+            style={{ height: b.display, width: "auto" }}
+            className="max-w-none select-none"
+            draggable={false}
+          />
         </li>
       ))}
     </ul>
   )
 }
 
-/** One line of brand names drifting right to left. Pauses offscreen and on hover. */
+/** One line of real brand logos drifting right to left. Pauses offscreen and on hover. */
 export function BrandMarquee({ label }: { label: string }) {
   const track = useRef<HTMLDivElement>(null)
 
@@ -42,7 +48,7 @@ export function BrandMarquee({ label }: { label: string }) {
     >
       <div
         ref={track}
-        className="flex w-max animate-[marquee_48s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center"
+        className="flex w-max animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center"
       >
         <Row />
         <div className="flex motion-reduce:hidden">

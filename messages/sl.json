@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Krovstvo, kleparstvo in tesarstvo Pšeničnik | Koroška",
-    "description": "Mojster klepar-krovec iz Libelič. Nove strehe, menjava kritine, žlebovi, ostrešja, strešna okna in strelovodi – Dravograd, Ravne na Koroškem, Prevalje, Vuzenica in Avstrija. Z vami od leta 2010."
+    "description": "Mojster klepar-krovec iz Libelič. Nove strehe, menjava kritine, žlebovi, ostrešja, strešna okna in strelovodi, Dravograd, Ravne na Koroškem, Prevalje, Vuzenica in Avstrija. Z vami od leta 2010."
   },
   "nav": {
     "services": "Storitve",
@@ -12,15 +12,21 @@
     "close": "Zapri meni",
     "call": "Pokličite nas",
     "skip": "Preskoči na vsebino",
-    "home": "Pšeničnik – domov",
+    "home": "Pšeničnik, domov",
     "language": "Jezik",
-    "phone": "041 757 179"
+    "phone": "041 757 179",
+    "faq": "Pogosta vprašanja",
+    "languageNames": {
+      "sl": "Slovenščina",
+      "de": "Deutsch"
+    },
+    "languageToggle": "Izberite jezik"
   },
   "hero": {
     "line1": "Hitro.",
     "line2": "Kvalitetno.",
     "line3": "V dogovorjenih rokih.",
-    "lead": "Krovska, kleparska in tesarska dela za domove na Koroškem in v sosednji Avstriji. Vodi jih mojster klepar-krovec – od ogleda do zadnjega strešnega detajla.",
+    "lead": "Krovska, kleparska in tesarska dela za domove na Koroškem in v sosednji Avstriji. Vodi jih mojster klepar-krovec, od ogleda do zadnjega strešnega detajla.",
     "cta": "Pošljite povpraševanje",
     "before": "Pred",
     "after": "Po",
@@ -114,7 +120,7 @@
     "steps": {
       "1": {
         "title": "Pokličete ali pišete",
-        "text": "Povejte nam, kaj bi radi uredili – po telefonu ali prek obrazca."
+        "text": "Povejte nam, kaj bi radi uredili, po telefonu ali prek obrazca."
       },
       "2": {
         "title": "Ogled in izmere",
@@ -131,8 +137,8 @@
     }
   },
   "references": {
-    "title": "Strehe, ki smo jih naredili",
-    "intro": "Izbor projektov iz naše okolice – od enodružinskih hiš do nadstreškov.",
+    "title": "Naši projekti",
+    "intro": "Izbor projektov iz naše okolice, od enodružinskih hiš do nadstreškov.",
     "video": "Naša video predstavitev",
     "videoPlay": "Predvajaj video",
     "items": {
@@ -148,12 +154,12 @@
   },
   "brands": {
     "title": "Kritine in materiali, s katerimi delamo",
-    "intro": "Svetujemo neodvisno od proizvajalca – izberemo, kar ustreza vaši hiši in proračunu."
+    "intro": "Svetujemo neodvisno od proizvajalca, izberemo, kar ustreza vaši hiši in proračunu."
   },
   "about": {
     "title": "Mojster na vaši strehi",
     "p1": "Podjetje vodi Tomo Pšeničnik, mojster klepar-krovec z opravljenim mojstrskim izpitom. Od leta 2010 z ekipo prekrivamo, obnavljamo in urejamo strehe v Libeličah, Dravogradu in okolici ter v sosednji Avstriji.",
-    "p2": "Vsaka streha je drugačna. Zato rešitev vedno prilagodimo hiši, njeni namembnosti in vašemu proračunu – in delo opravimo tako, kot bi ga zase.",
+    "p2": "Vsaka streha je drugačna. Zato rešitev vedno prilagodimo hiši, njeni namembnosti in vašemu proračunu, in delo opravimo tako, kot bi ga zase.",
     "photoPlaceholder": "Fotografija: Tomo in ekipa",
     "photoNote": "prihaja kmalu",
     "badge": "Mojstrski izpit",
@@ -168,11 +174,13 @@
   },
   "area": {
     "title": "Kje delamo",
-    "intro": "Doma smo v Libeličah, tik ob avstrijski meji. Strehe urejamo po vsej okolici:",
+    "intro": "Doma smo v Libeličah, tik ob avstrijski meji. Strehe urejamo po vsej okolici.",
     "austria": "Avstrija",
     "slovenia": "Slovenija",
     "base": "Naš sedež",
-    "alsoAustria": "…in v sosednji avstrijski Koroški."
+    "alsoAustria": "Delamo tudi v sosednji avstrijski Koroški.",
+    "mapTitle": "Zemljevid: Libeliče in okolica",
+    "openMap": "Odpri v Google Zemljevidih"
   },
   "cta": {
     "title": "Streha, ki zdrži. Rok, ki drži.",
@@ -190,5 +198,35 @@
     "sunday": "Nedelja",
     "closed": "zaprto",
     "rights": "Vse pravice pridržane."
+  },
+  "faq": {
+    "title": "Pogosta vprašanja",
+    "intro": "Odgovori na vprašanja, ki nam jih stranke najpogosteje zastavijo pred začetkom del.",
+    "items": [
+      {
+        "q": "Koliko stane nova streha ali menjava kritine?",
+        "a": "Cena je odvisna od velikosti in oblike strehe, izbrane kritine in stanja ostrešja. Zato streho najprej pogledamo in izmerimo, nato pa pripravimo ponudbo za vašo hišo."
+      },
+      {
+        "q": "Katero kritino naj izberem?",
+        "a": "Delamo z opečno, betonsko, pločevinasto, bitumensko in vlaknocementno kritino ter s pločevinasto kritino s posipom. Svetujemo glede na naklon strehe, obremenitev s snegom, videz hiše in vaš proračun."
+      },
+      {
+        "q": "Ali opravite vsa dela na strehi?",
+        "a": "Da. Krovska, kleparska in tesarska dela, strešna okna, strelovode in višinska dela opravimo sami, zato ne potrebujete več izvajalcev."
+      },
+      {
+        "q": "Kdaj lahko začnete z delom?",
+        "a": "Termin je odvisen od sezone in obsega dela. Datum izvedbe dogovorimo skupaj ob ponudbi in se ga držimo."
+      },
+      {
+        "q": "Ali izdate certifikat za strelovod?",
+        "a": "Da. Po montaži strelovoda opravimo meritve in izdamo certifikat o ustreznosti strelovodne inštalacije."
+      },
+      {
+        "q": "Ali delate tudi v Avstriji?",
+        "a": "Da. Poleg Libelič, Dravograda, Raven na Koroškem, Prevalj, Vuzenice in okolice delamo tudi v sosednji avstrijski Koroški."
+      }
+    ]
   }
 }

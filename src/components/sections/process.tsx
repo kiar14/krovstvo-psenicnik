@@ -11,10 +11,10 @@ export async function Process() {
       <Reveal className="mx-auto max-w-[1240px] px-5 md:px-8">
         <div className="text-center">
           {/* Label layout requested to match the client's reference */}
-          <p data-reveal="rise" className="flex items-center justify-center gap-4 text-sm font-bold tracking-[0.2em] text-slate uppercase">
-            <span aria-hidden="true" className="h-px w-8 bg-terracotta" />
+          <p data-reveal="rise" className="flex items-center justify-center gap-4 text-sm font-bold tracking-[0.2em] text-bronze-ink uppercase">
+            <span aria-hidden="true" className="h-px w-8 bg-spruce" />
             {t("eyebrow")}
-            <span aria-hidden="true" className="h-px w-8 bg-terracotta" />
+            <span aria-hidden="true" className="h-px w-8 bg-spruce" />
           </p>
           <h2
             id="postopek-title"
@@ -39,7 +39,7 @@ export async function Process() {
             <li key={n} className="relative flex gap-6 md:flex-col md:items-center md:gap-0 md:text-center">
               <span
                 data-reveal="pop"
-                className="relative z-10 flex size-14 shrink-0 items-center justify-center rounded-xl bg-terracotta font-bold tracking-wider text-white tabular-nums shadow-[0_8px_18px_-8px_rgb(186_50_1/0.8)]"
+                className="relative z-10 flex size-14 shrink-0 items-center justify-center rounded-xl bg-spruce font-bold tracking-wider text-navy-ink tabular-nums"
               >
                 0{n}
               </span>
