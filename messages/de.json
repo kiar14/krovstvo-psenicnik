@@ -91,8 +91,8 @@
     "callLabel": "Oder rufen Sie uns an",
     "name": "Vor- und Nachname",
     "phone": "Telefon",
-    "service": "Leistung",
-    "servicePlaceholder": "Leistung wählen",
+    "services": "Leistungen",
+    "servicesHint": "(Mehrfachauswahl möglich)",
     "other": "Sonstiges",
     "message": "Nachricht",
     "optional": "(optional)",
@@ -106,7 +106,7 @@
     "errors": {
       "name": "Bitte geben Sie Ihren Namen ein.",
       "phone": "Bitte geben Sie eine Telefonnummer an, unter der wir Sie erreichen.",
-      "service": "Bitte wählen Sie eine Leistung.",
+      "services": "Bitte wählen Sie mindestens eine Leistung.",
       "message": "Die Nachricht ist zu lang (max. 1000 Zeichen)."
     }
   },

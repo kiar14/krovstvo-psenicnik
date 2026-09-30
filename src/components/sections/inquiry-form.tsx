@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { ArrowUpRight, Check, ChevronDown, LoaderCircle } from "lucide-react"
+import { ArrowUpRight, Check, LoaderCircle } from "lucide-react"
 import { cx } from "@/lib/cx"
 import { validateInquiry, type InquiryErrors, type InquiryField } from "@/lib/schemas"
 import { submitInquiry } from "@/lib/actions/inquiry"
@@ -10,8 +10,8 @@ import { SELECT_SERVICE_EVENT } from "./service-link"
 export type InquiryFormLabels = {
   name: string
   phone: string
-  service: string
-  servicePlaceholder: string
+  services: string
+  servicesHint: string
   other: string
   message: string
   optional: string
@@ -29,17 +29,18 @@ export type InquiryFormLabels = {
 const field =
   "block w-full rounded-lg border border-input bg-white px-4 text-[1.02rem] text-graphite transition-[border-color,box-shadow] duration-200 outline-none placeholder:text-slate/70 hover:border-slate/60 focus:border-navy focus:shadow-[0_0_0_3px_rgb(0_22_63/0.15)] aria-invalid:border-destructive aria-invalid:shadow-[0_0_0_3px_rgb(180_35_24/0.12)]"
 
-const order: InquiryField[] = ["name", "phone", "service", "message"]
+const order: InquiryField[] = ["name", "phone", "services", "message"]
 
 export function InquiryForm({
   labels,
-  services,
+  services: serviceList,
 }: {
   labels: InquiryFormLabels
   services: { key: string; title: string }[]
 }) {
+  const allServices = [...serviceList, { key: "drugo", title: labels.other }]
   const form = useRef<HTMLFormElement>(null)
-  const [service, setService] = useState("")
+  const [services, setServices] = useState<string[]>([])
   const [errors, setErrors] = useState<InquiryErrors>({})
   // Like react-hook-form's defaults: check on submit, then re-check as the user corrects
   const [attempted, setAttempted] = useState(false)
@@ -47,22 +48,27 @@ export function InquiryForm({
   const [done, setDone] = useState<string | null>(null)
   const [serverError, setServerError] = useState(false)
 
-  const read = () => ({ ...Object.fromEntries(new FormData(form.current ?? undefined)), service })
+  const read = () => ({ ...Object.fromEntries(new FormData(form.current ?? undefined)), services })
+
+  const toggle = (key: string) =>
+    setServices((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
 
   useEffect(() => {
     const onSelect = (e: Event) => {
-      setService((e as CustomEvent<string>).detail)
+      // "Inquire" on a service card adds it; several cards build up a selection
+      const key = (e as CustomEvent<string>).detail
+      setServices((prev) => (prev.includes(key) ? prev : [...prev, key]))
       setDone(null)
     }
     window.addEventListener(SELECT_SERVICE_EVENT, onSelect)
     return () => window.removeEventListener(SELECT_SERVICE_EVENT, onSelect)
   }, [])
 
-  // Re-check once the service changes after a failed attempt (other fields re-check on input)
+  // Re-check once the services change after a failed attempt (other fields re-check on input)
   useEffect(() => {
     if (attempted && form.current) setErrors(validateInquiry(read()).errors)
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- only when the service changes
-  }, [service])
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only when the services change
+  }, [services])
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -72,7 +78,9 @@ export function InquiryForm({
     setErrors(found)
     const firstInvalid = order.find((k) => found[k])
     if (firstInvalid) {
-      document.getElementById(`f-${firstInvalid}`)?.focus()
+      // For the services, the first chip takes focus
+      const id = firstInvalid === "services" ? `f-services-${allServices[0].key}` : `f-${firstInvalid}`
+      document.getElementById(id)?.focus()
       return
     }
     setSubmitting(true)
@@ -88,7 +96,7 @@ export function InquiryForm({
   }
 
   const again = () => {
-    setService("")
+    setServices([])
     setErrors({})
     setAttempted(false)
     setDone(null)
@@ -164,35 +172,42 @@ export function InquiryForm({
         </div>
       </div>
 
-      <div>
-        <label htmlFor="f-service" className="mb-2 block font-bold text-graphite">
-          {labels.service}
-        </label>
-        <div className="relative">
-          <select
-            id="f-service"
-            value={service}
-            onChange={(e) => setService(e.target.value)}
-            className={cx(field, "h-13 cursor-pointer appearance-none pr-11")}
-            {...aria("service")}
-          >
-            <option value="" disabled>
-              {labels.servicePlaceholder}
-            </option>
-            {services.map(({ key, title }) => (
-              <option key={key} value={key}>
+      <fieldset aria-describedby={errors.services ? "f-services-err" : undefined}>
+        <legend className="mb-2 font-bold text-graphite">
+          {labels.services} <span className="text-sm font-normal text-slate">{labels.servicesHint}</span>
+        </legend>
+        <div className="flex flex-wrap gap-2">
+          {allServices.map(({ key, title }) => {
+            const on = services.includes(key)
+            return (
+              <label
+                key={key}
+                className={cx(
+                  "inline-flex h-11 cursor-pointer items-center gap-1.5 rounded-full border px-4 text-[0.98rem] font-semibold transition-[background-color,border-color,color] duration-200 select-none has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-bronze-ink",
+                  on
+                    ? "border-navy bg-navy text-white"
+                    : errors.services
+                      ? "border-destructive bg-white text-graphite"
+                      : "border-input bg-white text-graphite hover:border-slate/60",
+                )}
+              >
+                <input
+                  id={`f-services-${key}`}
+                  type="checkbox"
+                  name="services"
+                  value={key}
+                  checked={on}
+                  onChange={() => toggle(key)}
+                  className="sr-only"
+                />
+                {on && <Check className="-ml-1 size-4 text-spruce" strokeWidth={2.5} aria-hidden="true" />}
                 {title}
-              </option>
-            ))}
-            <option value="drugo">{labels.other}</option>
-          </select>
-          <ChevronDown
-            className="pointer-events-none absolute top-1/2 right-4 size-5 -translate-y-1/2 text-slate"
-            aria-hidden="true"
-          />
+              </label>
+            )
+          })}
         </div>
-        {err("service")}
-      </div>
+        {err("services")}
+      </fieldset>
 
       {/* Grows to fill the column, so the form ends level with the dark panel beside it */}
       <div className="flex flex-1 flex-col">
@@ -204,7 +219,7 @@ export function InquiryForm({
           name="message"
           rows={4}
           placeholder={labels.messagePlaceholder}
-          className={cx(field, "min-h-[8.5rem] flex-1 resize-y py-3 leading-relaxed")}
+          className={cx(field, "min-h-[7.5rem] flex-1 resize-y py-3 leading-relaxed")}
           {...aria("message")}
         />
         {err("message")}

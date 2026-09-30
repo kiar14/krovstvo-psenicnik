@@ -91,8 +91,8 @@
     "callLabel": "Ali nas pokličite",
     "name": "Ime in priimek",
     "phone": "Telefon",
-    "service": "Vrsta storitve",
-    "servicePlaceholder": "Izberite storitev",
+    "services": "Storitve",
+    "servicesHint": "(izberete lahko več)",
     "other": "Drugo",
     "message": "Sporočilo",
     "optional": "(neobvezno)",
@@ -106,7 +106,7 @@
     "errors": {
       "name": "Vpišite ime in priimek.",
       "phone": "Vpišite telefonsko številko, na kateri vas dobimo.",
-      "service": "Izberite storitev.",
+      "services": "Izberite vsaj eno storitev.",
       "message": "Sporočilo je predolgo (največ 1000 znakov)."
     }
   },

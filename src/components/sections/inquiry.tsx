@@ -12,8 +12,8 @@ export async function Inquiry() {
   const labels = {
     name: t("name"),
     phone: t("phone"),
-    service: t("service"),
-    servicePlaceholder: t("servicePlaceholder"),
+    services: t("services"),
+    servicesHint: t("servicesHint"),
     other: t("other"),
     message: t("message"),
     optional: t("optional"),
@@ -28,7 +28,7 @@ export async function Inquiry() {
     errors: {
       name: t("errors.name"),
       phone: t("errors.phone"),
-      service: t("errors.service"),
+      services: t("errors.services"),
       message: t("errors.message"),
     },
   }
