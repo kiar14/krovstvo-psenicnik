@@ -1,17 +1,14 @@
 "use server"
 
-import { z } from "zod"
-import { inquirySchema } from "@/lib/schemas"
+import { validateInquiry } from "@/lib/schemas"
 
 /**
- * Demo: validates on the server exactly like the client, then stops.
- * Production (B1/B2): deliver via Resend or an n8n webhook here.
+ * Validates on the server exactly like the client, then stops.
+ * NOT DELIVERED YET: before launch (B1/B2) send it via Resend or an n8n webhook here.
  */
 export async function submitInquiry(input: unknown) {
-  const parsed = inquirySchema.safeParse(input)
-  if (!parsed.success) {
-    return { ok: false as const, errors: z.flattenError(parsed.error).fieldErrors }
-  }
+  const { errors } = validateInquiry(input)
+  if (Object.keys(errors).length) return { ok: false as const, errors }
   await new Promise((r) => setTimeout(r, 600))
   return { ok: true as const }
 }

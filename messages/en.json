@@ -23,7 +23,8 @@
     },
     "languageToggle": "Choose language",
     "inquiry": "Send an inquiry",
-    "servicesMenu": "Show services"
+    "servicesMenu": "Show services",
+    "mainNav": "Main navigation"
   },
   "hero": {
     "line1": "Fast.",
@@ -33,30 +34,22 @@
     "cta": "Send an inquiry",
     "before": "Before",
     "after": "After",
-    "compare": "Compare the old and the new roof",
     "imageAlt": "Family house: an old, weathered roof and the same house with a new clay tile roof, roof windows and gutters"
   },
   "trust": {
+    "label": "Why homeowners trust us",
+    "since": "Roofing in the region since 2010",
     "master": {
-      "title": "Master craftsman",
+      "title": "Certified master",
       "text": "Roofer & sheet metal worker (OZS)"
     },
-    "deadline": {
-      "title": "On schedule",
-      "text": "and quick to respond"
+    "materials": {
+      "title": "Premium materials",
+      "text": "Tondach, Prefa, Creaton, Braas"
     },
-    "since": {
-      "title": "At your service since 2010",
-      "text": "Family business from Libeliče",
-      "caption": "At your service since 2010"
-    },
-    "allInOne": {
-      "title": "All from one team",
-      "text": "Roofing, sheet metal, carpentry"
-    },
-    "austria": {
-      "title": "Also in Austria",
-      "text": "Koroška and Carinthia"
+    "upfront": {
+      "title": "Quote & date up front",
+      "text": "agreed before any work starts"
     }
   },
   "services": {
@@ -106,7 +99,6 @@
     "messagePlaceholder": "Location, roof type, what needs to be done …",
     "submit": "Send inquiry",
     "sending": "Sending …",
-    "demoNote": "Demo form. Data is neither sent nor stored.",
     "successTitle": "Thank you, {name}!",
     "successText": "Your inquiry has arrived. We will get back to you within one working day to arrange a site visit.",
     "again": "Send another inquiry",

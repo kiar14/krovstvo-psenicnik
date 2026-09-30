@@ -2,11 +2,36 @@ import { ArrowUpRight, Phone } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { site } from "@/lib/site"
 import { Reveal } from "@/components/motion/reveal"
+import { services } from "@/lib/site"
 import { InquiryForm } from "./inquiry-form"
 
 export async function Inquiry() {
   const t = await getTranslations("form")
   const tn = await getTranslations("nav")
+  const ts = await getTranslations("services.items")
+  const labels = {
+    name: t("name"),
+    phone: t("phone"),
+    service: t("service"),
+    servicePlaceholder: t("servicePlaceholder"),
+    other: t("other"),
+    message: t("message"),
+    optional: t("optional"),
+    messagePlaceholder: t("messagePlaceholder"),
+    submit: t("submit"),
+    sending: t("sending"),
+    // Filled in on the client once the name is known
+    successTitle: t.raw("successTitle") as string,
+    successText: t("successText"),
+    again: t("again"),
+    errorGeneric: t("errorGeneric"),
+    errors: {
+      name: t("errors.name"),
+      phone: t("errors.phone"),
+      service: t("errors.service"),
+      message: t("errors.message"),
+    },
+  }
 
   return (
     <section
@@ -59,8 +84,8 @@ export async function Inquiry() {
           </div>
 
           {/* Right: the form */}
-          <div data-reveal="rise" className="px-6 py-10 md:px-12 md:py-14">
-            <InquiryForm />
+          <div data-reveal="rise" className="flex flex-col px-6 py-10 md:px-12 md:py-14">
+            <InquiryForm labels={labels} services={services.map(({ key }) => ({ key, title: ts(`${key}.title`) }))} />
           </div>
         </Reveal>
       </div>

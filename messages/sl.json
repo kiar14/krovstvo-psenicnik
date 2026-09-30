@@ -23,7 +23,8 @@
     },
     "languageToggle": "Izberite jezik",
     "inquiry": "Pošlji povpraševanje",
-    "servicesMenu": "Odpri seznam storitev"
+    "servicesMenu": "Odpri seznam storitev",
+    "mainNav": "Glavna navigacija"
   },
   "hero": {
     "line1": "Hitro.",
@@ -33,30 +34,22 @@
     "cta": "Pošljite povpraševanje",
     "before": "Pred",
     "after": "Po",
-    "compare": "Primerjaj staro in novo streho",
     "imageAlt": "Družinska hiša na Koroškem: stara, dotrajana streha in ista hiša z novo opečno kritino, strešnimi okni in žlebovi"
   },
   "trust": {
+    "label": "Zakaj nam lahko zaupate",
+    "since": "Na strehah v regiji že od leta 2010",
     "master": {
       "title": "Mojster klepar-krovec",
-      "text": "opravljen mojstrski izpit (OZS)"
+      "text": "z mojstrskim izpitom (OZS)"
     },
-    "deadline": {
-      "title": "V dogovorjenih rokih",
-      "text": "in hitra odzivnost"
+    "materials": {
+      "title": "Kakovostni materiali",
+      "text": "Tondach, Prefa, Creaton, Braas"
     },
-    "since": {
-      "title": "Z vami od 2010",
-      "text": "družinsko podjetje iz Libelič",
-      "caption": "Z vami že od leta 2010"
-    },
-    "allInOne": {
-      "title": "Vse na enem mestu",
-      "text": "krovstvo, kleparstvo, tesarstvo"
-    },
-    "austria": {
-      "title": "Delamo tudi v Avstriji",
-      "text": "Koroška in Kärnten"
+    "upfront": {
+      "title": "Ponudba in rok vnaprej",
+      "text": "dogovorjena pred začetkom del"
     }
   },
   "services": {
@@ -106,7 +99,6 @@
     "messagePlaceholder": "Kraj, vrsta strehe, kaj bi radi uredili …",
     "submit": "Pošlji povpraševanje",
     "sending": "Pošiljanje …",
-    "demoNote": "Predstavitveni obrazec. Podatki se ne pošiljajo ali shranjujejo.",
     "successTitle": "Hvala, {name}!",
     "successText": "Povpraševanje smo prejeli. Oglasimo se v enem delovnem dnevu, da se dogovorimo za ogled.",
     "again": "Pošlji novo povpraševanje",

@@ -23,7 +23,8 @@
     },
     "languageToggle": "Sprache wählen",
     "inquiry": "Anfrage senden",
-    "servicesMenu": "Leistungen anzeigen"
+    "servicesMenu": "Leistungen anzeigen",
+    "mainNav": "Hauptnavigation"
   },
   "hero": {
     "line1": "Schnell.",
@@ -33,30 +34,22 @@
     "cta": "Anfrage senden",
     "before": "Vorher",
     "after": "Nachher",
-    "compare": "Altes und neues Dach vergleichen",
     "imageAlt": "Einfamilienhaus in Kärnten: altes, verwittertes Dach und dasselbe Haus mit neuer Tondachdeckung, Dachfenstern und Dachrinnen"
   },
   "trust": {
+    "label": "Warum Sie uns vertrauen können",
+    "since": "Seit 2010 auf Dächern der Region",
     "master": {
-      "title": "Spenglermeister",
+      "title": "Geprüfter Meister",
       "text": "Dachdecker & Spengler (OZS)"
     },
-    "deadline": {
-      "title": "Termintreu",
-      "text": "und schnell erreichbar"
+    "materials": {
+      "title": "Markenmaterialien",
+      "text": "Tondach, Prefa, Creaton, Braas"
     },
-    "since": {
-      "title": "Seit 2010 für Sie da",
-      "text": "Familienbetrieb aus Libeliče",
-      "caption": "Seit 2010 für Sie da"
-    },
-    "allInOne": {
-      "title": "Alles aus einer Hand",
-      "text": "Dach, Spenglerei, Zimmerei"
-    },
-    "austria": {
-      "title": "Auch in Österreich",
-      "text": "Kärnten und Koroška"
+    "upfront": {
+      "title": "Angebot & Termin vorab",
+      "text": "fix vereinbart vor Arbeitsbeginn"
     }
   },
   "services": {
@@ -106,7 +99,6 @@
     "messagePlaceholder": "Ort, Dachart, was gemacht werden soll …",
     "submit": "Anfrage senden",
     "sending": "Wird gesendet …",
-    "demoNote": "Demo-Formular. Daten werden weder gesendet noch gespeichert.",
     "successTitle": "Danke, {name}!",
     "successText": "Ihre Anfrage ist angekommen. Wir melden uns innerhalb eines Werktags, um einen Besichtigungstermin zu vereinbaren.",
     "again": "Neue Anfrage senden",

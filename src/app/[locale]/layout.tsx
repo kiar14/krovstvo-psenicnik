@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Big_Shoulders, Source_Sans_3 } from "next/font/google"
-import { hasLocale, NextIntlClientProvider } from "next-intl"
+import { hasLocale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { routing } from "@/i18n/routing"
 import { site } from "@/lib/site"
 import { SmoothScroll } from "@/components/providers/smooth-scroll"
+import { RevealObserver } from "@/components/motion/reveal-observer"
 import "../globals.css"
 
 /**
@@ -27,7 +28,8 @@ const display = Big_Shoulders({
   axes: ["opsz"],
   display: "swap",
   fallback: ["Arial Narrow", "Roboto Condensed", "sans-serif"],
-  preload: false,
+  // The hero headline uses it: preloaded so it doesn't swap in late and nudge the text below
+  preload: true,
 })
 
 const ogLocales = { sl: "sl_SI", de: "de_AT", en: "en_GB" } as const
@@ -82,9 +84,10 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: startAtTop }} />
       </head>
       <body>
-        <NextIntlClientProvider>
-          <SmoothScroll>{children}</SmoothScroll>
-        </NextIntlClientProvider>
+        {/* No NextIntlClientProvider: client components get their strings as props, so the
+            translations and the message formatter stay on the server */}
+        <SmoothScroll>{children}</SmoothScroll>
+        <RevealObserver />
       </body>
     </html>
   )

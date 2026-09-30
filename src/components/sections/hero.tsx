@@ -1,70 +1,59 @@
-import { ArrowRight, Award, CalendarCheck, Layers, MapPin, Phone } from "lucide-react"
+import type { CSSProperties } from "react"
+import { getImageProps } from "next/image"
+import { ArrowRight, Award, CalendarCheck, Layers, Phone } from "lucide-react"
 import { getTranslations } from "next-intl/server"
-import { cn } from "cn"
 import { site } from "@/lib/site"
 import { Reveal } from "@/components/motion/reveal"
 import { HeroCompare } from "./hero-compare"
 
-const trustItems = [
+const imgClassName = "size-full object-cover object-[72%_center] brightness-[0.9] md:object-[center_60%]"
+
+/** Desktop and phone crops of one photo; `lcp` marks the one the page is judged by. */
+function artDirected(desktop: string, mobile: string, alt: string, lcp: boolean) {
+  const common = { alt, sizes: "100vw", quality: 70, fetchPriority: lcp ? ("high" as const) : ("low" as const) }
+  const {
+    props: { srcSet: mobileSrcSet },
+  } = getImageProps({ ...common, src: mobile, width: 1122, height: 1402 })
+  const { props } = getImageProps({ ...common, src: desktop, width: 1672, height: 941, loading: lcp ? "eager" : "lazy" })
+  return { mobileSrcSet, props }
+}
+
+/** Why trust us with the roof: track record, qualification, materials and a fixed plan. */
+const proof = [
   { key: "master", Icon: Award },
-  { key: "allInOne", Icon: Layers },
-  { key: "deadline", Icon: CalendarCheck },
-  { key: "austria", Icon: MapPin },
+  { key: "materials", Icon: Layers },
+  { key: "upfront", Icon: CalendarCheck },
 ] as const
 
-/** Trust bar: a big year first, then icon + title + subtitle columns split by hairlines. */
-async function TrustList({ variant }: { variant: "bar" | "grid" }) {
-  const t = await getTranslations("trust")
-  const bar = variant === "bar"
-  return (
-    <ul
-      className={cn(
-        bar
-          ? "mx-auto grid h-full max-w-[1440px] grid-cols-5 px-6 lg:px-10"
-          : "grid grid-cols-2 gap-y-8 px-5 py-9",
-      )}
-    >
-      <li
-        data-reveal="rise"
-        className={cn(
-          "flex flex-col items-center justify-center px-3 text-center",
-          !bar && "col-span-2 border-b border-white/10 pb-8",
-        )}
-      >
-        <span className="font-display-tight text-[3rem] leading-none font-extrabold text-spruce tabular-nums">2010</span>
-        <span className="mt-2 text-sm text-on-navy">{t("since.caption")}</span>
-      </li>
-      {trustItems.map(({ key, Icon }) => (
-        <li
-          key={key}
-          data-reveal="rise"
-          className={cn(
-            "flex flex-col items-center justify-center px-3 text-center",
-            bar && "border-l border-white/12 my-5",
-          )}
-        >
-          <Icon className="size-6 text-spruce" strokeWidth={1.5} aria-hidden="true" />
-          <span className="mt-2.5 text-[1.12rem] leading-tight font-semibold text-white">{t(`${key}.title`)}</span>
-          <span className="mt-1 text-sm leading-snug text-on-navy">{t(`${key}.text`)}</span>
-        </li>
-      ))}
-    </ul>
-  )
-}
+const i = (n: number) => ({ "--i": n }) as CSSProperties
 
 export async function Hero() {
   const t = await getTranslations("hero")
+  const tt = await getTranslations("trust")
   const tn = await getTranslations("nav")
+
+  const before = artDirected("/media/hero2-before-desktop.webp", "/media/hero2-before-mobile.webp", t("imageAlt"), true)
+  const after = artDirected("/media/hero2-after-desktop.webp", "/media/hero2-after-mobile.webp", "", false)
 
   return (
     <>
       <section
         id="top"
         aria-labelledby="hero-title"
-        className="relative isolate -mt-[var(--header-h)] h-svh min-h-[calc(620px+var(--header-h))] overflow-hidden bg-navy-ink [--trust-h:136px] md:min-h-[calc(720px+var(--header-h))] md:max-h-[calc(1100px+var(--header-h))]"
+        className="relative isolate -mt-[var(--header-h)] h-svh min-h-[calc(620px+var(--header-h))] overflow-hidden bg-navy-ink md:min-h-[calc(720px+var(--header-h))] md:max-h-[calc(1100px+var(--header-h))]"
       >
+        <picture className="absolute inset-0">
+          <source media="(max-width: 767px)" srcSet={before.mobileSrcSet} sizes="100vw" />
+          {/* eslint-disable-next-line jsx-a11y/alt-text -- alt comes from getImageProps */}
+          <img {...before.props} className={imgClassName} />
+        </picture>
         <HeroCompare
-          labels={{ before: t("before"), after: t("after"), compare: t("compare"), alt: t("imageAlt") }}
+          src={after.props.src}
+          srcSet={after.props.srcSet}
+          sizes={after.props.sizes}
+          mobileSrcSet={after.mobileSrcSet}
+          imgClassName={imgClassName}
+          labels={{ before: t("before"), after: t("after") }}
         />
 
         <Reveal
@@ -78,20 +67,21 @@ export async function Hero() {
               className="font-display-tight text-[clamp(3rem,7vw,5.5rem)] font-extrabold text-white uppercase"
             >
               <span className="mask-line">
-                <span data-reveal="mask" className="block">{t("line1")}</span>
+                <span data-reveal="mask" style={i(0)} className="block">{t("line1")}</span>
               </span>
               <span className="mask-line">
-                <span data-reveal="mask" className="block">{t("line2")}</span>
+                <span data-reveal="mask" style={i(1)} className="block">{t("line2")}</span>
               </span>
               <span className="mask-line">
-                <span data-reveal="mask" className="block text-spruce">{t("line3")}</span>
+                <span data-reveal="mask" style={i(2)} className="block text-spruce">{t("line3")}</span>
               </span>
             </h1>
-            <p data-reveal="rise" className="mt-6 hidden max-w-[32rem] text-[1.2rem] leading-relaxed font-medium text-white md:block">
+            <p data-reveal="rise" style={i(0)} className="mt-6 hidden max-w-[32rem] text-[1.2rem] leading-relaxed font-medium text-white md:block">
               {t("lead")}
             </p>
             <div
               data-reveal="rise"
+              style={i(1)}
               className="flex flex-col gap-2.5 [text-shadow:none] sm:flex-row sm:flex-wrap sm:gap-3 md:mt-9"
             >
               <a
@@ -111,20 +101,33 @@ export async function Hero() {
             </div>
           </div>
         </Reveal>
-
-        {/* Trust bar, part of the hero on larger screens */}
-        <Reveal
-          on="load"
-          delay={0.9}
-          className="absolute inset-x-0 bottom-0 z-10 hidden h-[var(--trust-h)] bg-navy-ink/85 backdrop-blur-md md:block"
-        >
-          <TrustList variant="bar" />
-        </Reveal>
       </section>
 
-      {/* On phones the trust bar follows the picture */}
-      <Reveal className="bg-navy-ink md:hidden">
-        <TrustList variant="grid" />
+      {/* Proof strip: glass over the bottom of the photo from md up (it may grow taller when copy wraps),
+          a plain navy band below it on phones */}
+      <Reveal
+        on="load"
+        delay={0.9}
+        className="relative z-10 bg-navy-ink md:-mt-[var(--trust-h)] md:bg-navy-ink/85 md:backdrop-blur-md"
+      >
+        <ul aria-label={tt("label")} className="mx-auto grid max-w-[1440px] grid-cols-2 gap-y-8 px-5 py-9 md:min-h-[var(--trust-h)] md:grid-cols-4 md:gap-y-0 md:px-6 md:py-0 lg:px-10">
+          <li data-reveal="rise" style={i(0)} className="flex flex-col items-center justify-center px-3 text-center">
+            <span className="font-display-tight text-[3rem] leading-none font-extrabold text-spruce tabular-nums">2010</span>
+            <span className="mt-2 text-sm text-on-navy">{tt("since")}</span>
+          </li>
+          {proof.map(({ key, Icon }, n) => (
+            <li
+              key={key}
+              data-reveal="rise"
+              style={i(n + 1)}
+              className="flex flex-col items-center justify-center px-3 text-center md:my-5 md:border-l md:border-white/12"
+            >
+              <Icon className="size-6 text-spruce" strokeWidth={1.5} aria-hidden="true" />
+              <span className="mt-2.5 text-[1.12rem] leading-tight font-semibold text-white">{tt(`${key}.title`)}</span>
+              <span className="mt-1 text-sm leading-snug text-on-navy">{tt(`${key}.text`)}</span>
+            </li>
+          ))}
+        </ul>
       </Reveal>
     </>
   )

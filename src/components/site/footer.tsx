@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
+import type { Locale } from "@/i18n/routing"
 import { services, site } from "@/lib/site"
 import { LogoFull } from "./logo"
 import { LanguageSwitch } from "./language-switch"
@@ -8,6 +9,7 @@ export async function Footer() {
   const t = await getTranslations("footer")
   const ts = await getTranslations("services.items")
   const tn = await getTranslations("nav")
+  const locale = (await getLocale()) as Locale
 
   return (
     <footer className="bg-navy-ink text-on-navy">
@@ -75,7 +77,7 @@ export async function Footer() {
           <p>
             © 2026 {site.name} · {site.street}, {site.postal} {site.city} · ID za DDV {site.vat} · MŠ {site.reg}. {t("rights")}
           </p>
-          <LanguageSwitch tone="light" placement="up" align="responsive" />
+          <LanguageSwitch locale={locale} label={tn("languageToggle")} tone="light" placement="up" align="responsive" />
         </div>
       </div>
     </footer>
